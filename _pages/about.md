@@ -1,6 +1,4 @@
-I am **Vipul**, an AI researcher focused on handling the trustworthy and scalability challenges in Graph Machine Learning.
-
- You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and Markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
+I am **Vipul**, an AI researcher focused on handling the trustworthy and scalability challenges in Graph Machine Learning. Currently, I am a fifth year doctoral candidate in the Department of Electrical Engineering at the [Indian Institute of Technology Delhi](https://home.iitd.ac.in). 
 
 A data-driven personal website
 ======
