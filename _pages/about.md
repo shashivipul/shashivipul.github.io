@@ -11,8 +11,6 @@ Namaste! I am **Vipul**, an AI researcher working on trustworthiness and scalabi
 
 Before starting my PhD, I completed my **M.Tech.** in the Department of Electrical Engineering at the [Indian Institute of Technology Patna](https://www.iitp.ac.in), where I worked on biomedical signal and image processing under the supervision of [Prof. Maheshkumar H. Kolekar](https://www.iitp.ac.in/~mahesh/). I earned my **B.Tech.** in Electronics and Communication Engineering from the [Dr. A.P.J. Abdul Kalam Technical University (AKTU)](https://aktu.ac.in).
 
----
-
 ## 📰 Recent Updates
 - **[Nov 2025]** Received ACM Travel grant
 - **[Nov 2025]** Selected for the [LOTUS Fellowship](https://www.jst.go.jp/program/india/en/) from [Japan Science and Technology Agency](https://www.jst.go.jp/EN/)
