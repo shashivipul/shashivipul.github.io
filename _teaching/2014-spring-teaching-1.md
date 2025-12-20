@@ -4,7 +4,6 @@ collection: teaching
 type: "Professional Course"
 permalink: https://aimlindustry.iitd.ac.in/instructors.html
 venue: "Online"
-date: 2022-Present
 location: #"City, Country"
 ---
 
