@@ -2,7 +2,7 @@
 title: "Teaching experience"
 collection: teaching
 type: "Professional Course"
-permalink: [AI/ML for Industry](https://aimlindustry.iitd.ac.in/instructors.html)
+permalink: https://aimlindustry.iitd.ac.in/instructors.html
 venue: "Online"
 date: 2022-Present
 location: #"City, Country"
