@@ -14,11 +14,11 @@ Before starting my PhD, I completed my **M.Tech.** in the Department of Electric
 ---
 
 ## 📰 Recent Updates
-
-- **[Sep 2025]** Our paper on fairness-aware graph learning has been accepted at *XYZ Conference*.
-- **[Aug 2025]** Gave an invited talk on robustness in GNNs at *ABC Workshop*.
-- **[Jul 2025]** Started collaborating with *Lab/Group Name* on scalable graph learning.
-- **[Jun 2025]** Awarded travel grant for *Conference Name*.
+- **[Nov 2025]** Received ACM Travel grant
+- **[Nov 2025]** Selected for the [LOTUS Fellowship](https://www.jst.go.jp/program/india/en/) from [Japan Science and Technology Agency](https://www.jst.go.jp/EN/)
+- **[Nov 2025]** Paper accepted at [AAAI 2026](https://aaai.org/conference/aaai/aaai-26/) main track
+- **[Oct 2025]** Paper accepted at [IEEE DSAA 2025](https://dsaa.ieee.org/2025/)
+- **[Jun 2025]** Received IEEE CIS Student Travel Grant.
 
 
 
