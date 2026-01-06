@@ -12,11 +12,14 @@ Namaste! I am **Vipul**, an AI researcher working on trustworthiness and scalabi
 Before starting my PhD, I completed my **M.Tech.** in the Department of Electrical Engineering at the [Indian Institute of Technology Patna](https://www.iitp.ac.in), where I worked on biomedical signal and image processing under the supervision of [Prof. Maheshkumar H. Kolekar](https://www.iitp.ac.in/~mahesh/). I earned my **B.Tech.** in Electronics and Communication Engineering from the [Dr. A.P.J. Abdul Kalam Technical University (AKTU)](https://aktu.ac.in).
 
 ## 📰 Recent Updates
-- **[Nov 2025]** Received ACM Travel grant
-- **[Nov 2025]** Selected for the [LOTUS Fellowship](https://www.jst.go.jp/program/india/en/) from [Japan Science and Technology Agency](https://www.jst.go.jp/EN/)
-- **[Nov 2025]** Paper accepted at [AAAI 2026](https://aaai.org/conference/aaai/aaai-26/) main track
-- **[Oct 2025]** Paper accepted at [IEEE DSAA 2025](https://dsaa.ieee.org/2025/)
-- **[Jun 2025]** Received IEEE CIS Student Travel Grant.
+- **[Dec 2025]** 🏆📄 Paper accepted at [IEEE Transactions on AI](https://cis.ieee.org/publications/ieee-transactions-on-artificial-intelligence)
+- **[Nov 2025]** 🎓✈️ Received ACM Travel Grant to attend AAAI 2026 in Singapore 🇸🇬
+- **[Nov 2025]** 🌸🇯🇵 Selected for the [LOTUS Fellowship](https://www.jst.go.jp/program/india/en/) (JST, Japan)
+- **[Nov 2025]** 🏆📄 Paper accepted at [AAAI 2026](https://aaai.org/conference/aaai/aaai-26/) (Main Track)
+- **[Oct 2025]** 🎓✈️ Received IEEE CIS Student Travel Grant to attend IEEE DSAA 2026 in United Kingdom 🇬🇧
+- **[Jun 2025]** 🏆📄 Paper accepted at [IEEE DSAA 2025](https://dsaa.ieee.org/2025/)
+
+
 
 
 
