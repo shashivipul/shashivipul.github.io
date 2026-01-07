@@ -7,13 +7,13 @@ redirect_from:
   - /about.html
 ---
 
-Namaste! I am **Vipul**, an AI researcher working on trustworthiness and scalability challenges in **Graph Machine Learning**, with a particular focus on fairness and robustness. I am currently a fifth-year PhD candidate in the Department of Electrical Engineering at the [Indian Institute of Technology Delhi](https://home.iitd.ac.in). My research is advised by [Prof. Sandeep Kumar](https://sites.google.com/view/sandeepkr/home) and [Prof. Jayadeva](https://web.iitd.ac.in/~jayadeva/) at the [Machine Intelligence Signals and Networks (MISN) Lab](https://misn.iitd.ac.in). I am incredibly grateful and excited to mention that I have received the prestigious [Prime Minister’s Research Fellowship (PMRF)](https://www.pmrf.in) as part of my PhD journey.
+Namaste! I am **Vipul**, an AI researcher working on trustworthiness and scalability challenges in **Graph Machine Learning**, with a particular focus on fairness and robustness. I am currently a fifth-year PhD candidate in the Department of Electrical Engineering at the [Indian Institute of Technology Delhi](https://home.iitd.ac.in). My work spans graph deep learning, medical image analytics, financial time-series, and knowledge distillation. Recently, I've been exploring the trustworthiness of LLMs and graph-language models. My research is advised by [Prof. Sandeep Kumar](https://sites.google.com/view/sandeepkr/home) and [Prof. Jayadeva](https://web.iitd.ac.in/~jayadeva/) at the [Machine Intelligence Signals and Networks (MISN) Lab](https://misn.iitd.ac.in). I am incredibly grateful and excited to mention that I have received the prestigious [Prime Minister’s Research Fellowship (PMRF)](https://www.pmrf.in) as part of my PhD journey.
 
 I will be joining the lab of [Prof. Tsuyoshi Murata](https://www.net.c.titech.ac.jp/murata.html) at the [Institute of Science Tokyo](https://www.isct.ac.jp/en) as an exchange student from April 2026.
 
 Before starting my PhD, I completed my **M.Tech.** in the Department of Electrical Engineering at the [Indian Institute of Technology Patna](https://www.iitp.ac.in), where I worked on biomedical signal and image processing under the supervision of [Prof. Maheshkumar H. Kolekar](https://www.iitp.ac.in/~mahesh/). I earned my **B.Tech.** in Electronics and Communication Engineering from the [Dr. A.P.J. Abdul Kalam Technical University (AKTU)](https://aktu.ac.in).
 
-## 📰 Recent Updates
+## 📰 Updates
 - **[Dec 2025]** 🏆📄 Paper accepted at [IEEE Transactions on AI](https://cis.ieee.org/publications/ieee-transactions-on-artificial-intelligence)
 - **[Nov 2025]** 🎓✈️ Received ACM Travel Grant to attend AAAI 2026 in Singapore 🇸🇬
 - **[Nov 2025]** 🌸🇯🇵 Selected for the [LOTUS Fellowship](https://www.jst.go.jp/program/india/en/) (JST, Japan)
