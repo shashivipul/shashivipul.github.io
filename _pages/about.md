@@ -15,10 +15,10 @@ Before starting my PhD, I completed my **M.Tech.** in the Department of Electric
 
 ## 📰 Updates
 - **[Dec 2025]** 🏆📄 Paper accepted at [IEEE Transactions on AI](https://cis.ieee.org/publications/ieee-transactions-on-artificial-intelligence)
-- **[Nov 2025]** 🎓✈️ Received ACM Travel Grant to attend AAAI 2026 in Singapore 🇸🇬
+- **[Nov 2025]** 🎓✈️ Received [ACM Travel Grant](https://www.iarcs.org.in/activities/grants.php) to attend AAAI 2026 in Singapore 🇸🇬
 - **[Nov 2025]** 🌸🇯🇵 Selected for the [LOTUS Fellowship](https://www.jst.go.jp/program/india/en/) (JST, Japan)
 - **[Nov 2025]** 🏆📄 Paper accepted at [AAAI 2026](https://aaai.org/conference/aaai/aaai-26/) (Main Track)
-- **[Oct 2025]** 🎓✈️ Received IEEE CIS Student Travel Grant to attend IEEE DSAA 2026 in United Kingdom 🇬🇧
+- **[Oct 2025]** 🎓✈️ Received [IEEE CIS Student Travel Grant](https://cis.ieee.org/activities/membership-activities/travel-grants) to attend IEEE DSAA 2026 in United Kingdom 🇬🇧
 - **[Jun 2025]** 🏆📄 Paper accepted at [IEEE DSAA 2025](https://dsaa.ieee.org/2025/)
 
 
