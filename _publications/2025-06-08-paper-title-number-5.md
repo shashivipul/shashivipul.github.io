@@ -2,7 +2,7 @@
 title: "Leap of FAITH from GNN-to-MLP: Fairness Aware Inference via DisTillation of GrapH Knowledge"
 collection: publications
 category: conferences
-permalink: [Leap of FAITH from GNN-to-MLP: Fairness Aware Inference via DisTillation of GrapH Knowledge](https://github.com/shashivipul/FAITH)
+#permalink: [Leap of FAITH from GNN-to-MLP: Fairness Aware Inference via DisTillation of GrapH Knowledge](https://github.com/shashivipul/FAITH)
 excerpt: 'In this paper we tackle the challenge of latency and fairness in GNNs. We propose a fairness-aware GNN-to-MLP knowledge distillation framework.'
 date: 2026
 venue: 'AAAI 2026'
