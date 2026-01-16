@@ -14,32 +14,30 @@ I will be joining the lab of [Prof. Tsuyoshi Murata](https://www.net.c.titech.ac
 Before starting my PhD, I completed my **M.Tech.** in the Department of Electrical Engineering at the [Indian Institute of Technology Patna](https://www.iitp.ac.in), where I worked on biomedical signal and image processing under the supervision of [Prof. Maheshkumar H. Kolekar](https://www.iitp.ac.in/~mahesh/). I earned my **B.Tech.** in Electronics and Communication Engineering from the [Dr. A.P.J. Abdul Kalam Technical University (AKTU)](https://aktu.ac.in).
 
 
-<h2 style="text-align:center;">Connect</h2>
-
 <div style="display:flex; justify-content:center; gap:28px; flex-wrap:wrap;">
 
-  <a href="https://www.linkedin.com/in/YOUR_LINKEDIN/"
+  <a href="https://www.linkedin.com/in/vipulsingh25"
      target="_blank"
      style="text-align:center; text-decoration:none;">
     <i class="fab fa-linkedin" style="font-size:30px;"></i><br>
     <span>LinkedIn</span>
   </a>
 
-  <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID"
+  <a href="https://scholar.google.com/citations?user=MRJqKywAAAAJ&hl=en"
      target="_blank"
      style="text-align:center; text-decoration:none;">
     <i class="fas fa-graduation-cap" style="font-size:30px;"></i><br>
     <span>Scholar</span>
   </a>
 
-  <a href="https://github.com/YOUR_GITHUB_USERNAME"
+  <a href="https://github.com/shashivipul"
      target="_blank"
      style="text-align:center; text-decoration:none;">
     <i class="fab fa-github" style="font-size:30px;"></i><br>
     <span>GitHub</span>
   </a>
 
-  <a href="/cv/"
+  <a href="https://drive.google.com/file/d/1WpLTwmIluLPxa7caAgfWQmlg-7Llh8zU/view?usp=share_link"
      target="_blank"
      style="text-align:center; text-decoration:none;">
     <i class="fas fa-file-alt" style="font-size:30px;"></i><br>
