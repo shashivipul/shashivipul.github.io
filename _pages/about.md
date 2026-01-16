@@ -18,7 +18,7 @@ Before starting my PhD, I completed my **M.Tech.** in the Department of Electric
 - **[Nov 2025]** 🎓✈️ Received [ACM Travel Grant](https://www.iarcs.org.in/activities/grants.php) to attend AAAI 2026 in Singapore 🇸🇬
 - **[Nov 2025]** 🌸🇯🇵 Selected for the [LOTUS Fellowship](https://www.jst.go.jp/program/india/en/) (JST, Japan)
 - **[Nov 2025]** 🏆📄 Paper accepted at [AAAI 2026](https://aaai.org/conference/aaai/aaai-26/) (Main Track)
-- **[Nov 2025]** 🏆📄 Paper accepted at [AAAI 2026]([https://aaai.org/conference/aaai/aaai-26/](https://neuroai-multimodal-workshop.github.io)) (NeuroAI Workshop)
+- **[Nov 2025]** 🏆📄 Paper accepted at [AAAI 2026](https://neuroai-multimodal-workshop.github.io) (NeuroAI Workshop)
 - **[Oct 2025]** 🎓✈️ Received [IEEE CIS Student Travel Grant](https://cis.ieee.org/activities/membership-activities/travel-grants) to attend IEEE DSAA 2026 in United Kingdom 🇬🇧
 - **[Jun 2025]** 🏆📄 Paper accepted at [IEEE DSAA 2025](https://dsaa.ieee.org/2025/)
 
