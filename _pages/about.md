@@ -13,6 +13,31 @@ I will be joining the lab of [Prof. Tsuyoshi Murata](https://www.net.c.titech.ac
 
 Before starting my PhD, I completed my **M.Tech.** in the Department of Electrical Engineering at the [Indian Institute of Technology Patna](https://www.iitp.ac.in), where I worked on biomedical signal and image processing under the supervision of [Prof. Maheshkumar H. Kolekar](https://www.iitp.ac.in/~mahesh/). I earned my **B.Tech.** in Electronics and Communication Engineering from the [Dr. A.P.J. Abdul Kalam Technical University (AKTU)](https://aktu.ac.in).
 
+<hr>
+
+<h2>Connect</h2>
+
+<ul style="list-style:none; padding-left:0;">
+  <li style="margin:10px 0;">
+    <a href="https://www.linkedin.com/in/YOUR_LINKEDIN/" target="_blank">
+      <i class="fab fa-linkedin"></i> LinkedIn
+    </a>
+  </li>
+
+  <li style="margin:10px 0;">
+    <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank">
+      <i class="fas fa-graduation-cap"></i> Google Scholar
+    </a>
+  </li>
+
+  <li style="margin:10px 0;">
+    <a href="https://github.com/YOUR_USERNAME" target="_blank">
+      <i class="fab fa-github"></i> GitHub
+    </a>
+  </li>
+</ul>
+
+
 ## 📰 Updates
 - **[Dec 2025]** 🏆📄 Paper accepted at [IEEE Transactions on AI](https://cis.ieee.org/publications/ieee-transactions-on-artificial-intelligence)
 - **[Nov 2025]** 🎓✈️ Received [ACM Travel Grant](https://www.iarcs.org.in/activities/grants.php) to attend AAAI 2026 in Singapore 🇸🇬
