@@ -14,7 +14,7 @@ I will be joining the lab of [Prof. Tsuyoshi Murata](https://www.net.c.titech.ac
 Before starting my PhD, I completed my **M.Tech.** in the Department of Electrical Engineering at the [Indian Institute of Technology Patna](https://www.iitp.ac.in), where I worked on biomedical signal and image processing under the supervision of [Prof. Maheshkumar H. Kolekar](https://www.iitp.ac.in/~mahesh/). I earned my **B.Tech.** in Electronics and Communication Engineering from the [Dr. A.P.J. Abdul Kalam Technical University (AKTU)](https://aktu.ac.in).
 
 
-
+<h2 style="text-align:center;">Connect</h2>
 
 <div style="display:flex; justify-content:center; gap:28px; flex-wrap:wrap;">
 
@@ -45,6 +45,8 @@ Before starting my PhD, I completed my **M.Tech.** in the Department of Electric
     <i class="fas fa-file-alt" style="font-size:30px;"></i><br>
     <span>CV</span>
   </a>
+
+</div>
 
 
 
