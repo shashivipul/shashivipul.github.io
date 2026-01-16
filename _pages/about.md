@@ -17,25 +17,26 @@ Before starting my PhD, I completed my **M.Tech.** in the Department of Electric
 
 <h2>Connect</h2>
 
-<ul style="list-style:none; padding-left:0;">
-  <li style="margin:10px 0;">
-    <a href="https://www.linkedin.com/in/YOUR_LINKEDIN/" target="_blank">
-      <i class="fab fa-linkedin"></i> LinkedIn
-    </a>
-  </li>
+<div style="display:flex; gap:22px; align-items:center; flex-wrap:wrap;">
+  
+  <a href="https://www.linkedin.com/in/YOUR_LINKEDIN/" target="_blank" title="LinkedIn">
+    <i class="fab fa-linkedin" style="font-size:30px;"></i>
+  </a>
 
-  <li style="margin:10px 0;">
-    <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank">
-      <i class="fas fa-graduation-cap"></i> Google Scholar
-    </a>
-  </li>
+  <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" target="_blank" title="Google Scholar">
+    <i class="fas fa-graduation-cap" style="font-size:30px;"></i>
+  </a>
 
-  <li style="margin:10px 0;">
-    <a href="https://github.com/YOUR_USERNAME" target="_blank">
-      <i class="fab fa-github"></i> GitHub
-    </a>
-  </li>
-</ul>
+  <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" title="GitHub">
+    <i class="fab fa-github" style="font-size:30px;"></i>
+  </a>
+
+  <a href="/cv/" target="_blank" title="CV">
+    <i class="fas fa-file-alt" style="font-size:30px;"></i>
+  </a>
+
+</div>
+
 
 
 ## 📰 Updates
