@@ -1,0 +1,22 @@
+/* FORCE LIGHT MODE — disable dark mode completely */
+:root {
+  color-scheme: light;
+}
+
+/* Override dark-mode styles */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --global-bg-color: #ffffff;
+    --global-text-color: #111111;
+    --global-border-color: #e5e5e5;
+    --global-link-color: #2f7f93;
+    --global-link-color-hover: #256a7b;
+    --global-code-background-color: #f6f8fa;
+    --global-code-text-color: #111111;
+  }
+
+  html, body {
+    background-color: #ffffff !important;
+    color: #111111 !important;
+  }
+}
