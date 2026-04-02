@@ -50,6 +50,7 @@ Before starting my PhD, I completed my **M.Tech.** in the Department of Electric
 
 
 ## 📰 Updates
+- **[Apr 2026]** 🎓✈️ Joined Institute of Science Tokyo with LOTUS Fellowship
 - **[Dec 2025]** 🏆📄 Paper accepted at [IEEE Transactions on AI](https://cis.ieee.org/publications/ieee-transactions-on-artificial-intelligence)
 - **[Nov 2025]** 🎓✈️ Received [ACM Travel Grant](https://www.iarcs.org.in/activities/grants.php) to attend AAAI 2026 in Singapore 🇸🇬
 - **[Nov 2025]** 🌸🇯🇵 Selected for the [LOTUS Fellowship](https://www.jst.go.jp/program/india/en/) (JST, Japan)
