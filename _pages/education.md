@@ -4,6 +4,12 @@ permalink: /education/
 layout: single
 ---
 
+#### 2026 
+**Visiting Junior Fellow**, **Institute of Science Tokyo (Formerly Tokyo Institute of Technology)**, Japan  
+   Supervisor(s): Prof. Tsuyoshi Murata
+   
+   Topic: “Towards OOD Robustness in Fair Graph Learning”
+
 #### 2021 – Present
 **Ph.D. in Electrical Engineering**, **Indian Institute of Technology**, Delhi  
    CGPA: 9.75/10 | Supervisor(s): Prof. Sandeep Kumar and Prof. Jayadeva 
