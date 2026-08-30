@@ -50,6 +50,7 @@ Before starting my PhD, I completed my **M.Tech.** in the Department of Electric
 
 
 ## 📰 Updates
+- **[Aug 2026]** 🎓 Pre-PhD Synopsis Presentation completed!FINAL phase of PhD research.
 - **[Jun 2026]** 🏆📄 Paper accepted at [MICCAI 2026](https://conferences.miccai.org/2026/en/default.asp)
 - **[Apr 2026]** 🎓✈️ Joined Institute of Science Tokyo with LOTUS Fellowship
 - **[Dec 2025]** 🏆📄 Paper accepted at [IEEE Transactions on AI](https://cis.ieee.org/publications/ieee-transactions-on-artificial-intelligence)
