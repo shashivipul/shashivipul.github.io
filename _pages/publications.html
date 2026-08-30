@@ -1,0 +1,73 @@
+---
+layout: archive
+title: "Research"
+permalink: /publications/
+author_profile: true
+---
+
+{% include base_path %}
+
+<p>
+My research develops theoretical and optimization-driven methods for trustworthy machine learning,
+with a focus on graph-structured and biomedical data. I study how learning systems can remain fair,
+robust, privacy-aware, uncertainty-aware, and scalable under real-world deployment constraints.
+My work spans certifiably robust and fair graph neural networks, fairness-aware knowledge distillation,
+graph coarsening, graph-language alignment, and trustworthy biomedical representation learning.
+</p>
+
+<h2>Research Areas</h2>
+
+<h3>Trustworthy and Efficient Graph Representation Learning</h3>
+<p>
+I study robustness, fairness, efficiency, and privacy in graph learning. My work includes certifiably
+robust and fair GNN training under structural and feature perturbations, and GNN-to-MLP knowledge
+distillation that enables efficient graph-free inference while preserving structural information and
+fairness. Current work also examines class-conditional transfer disparities and connectivity leakage in
+graph-free inference.
+</p>
+
+<h3>Graph Coarsening and Scalable Graph Learning</h3>
+<p>
+I develop optimization-based approaches for reducing graph size while preserving task-relevant
+structural and feature information. The goal is to make learning on large graph-structured datasets
+more computationally efficient without discarding the information needed downstream.
+</p>
+
+<h3>Trustworthy Biomedical Representation Learning</h3>
+<p>
+I design self-supervised, robust, and equity-aware learning methods for heterogeneous neuroimaging
+data. This includes multi-domain fMRI functional-connectivity modeling for major depressive disorder
+and robust/fair BOLD-signal analysis across population groups and distribution shifts.
+</p>
+
+<h3>Graph-Language and Tabular Large Language Models</h3>
+<p>
+I investigate graph-language alignment for neurological data, including mapping self-supervised fMRI
+graph representations into the embedding space of frozen language models for few-shot diagnosis.
+I am also studying tabular large language models for healthcare and EHR data across robustness,
+fairness, privacy, uncertainty, and calibration.
+</p>
+
+<h3>Medical Imaging and Deployable Healthcare AI</h3>
+<p>
+My earlier work developed deep-learning methods for CT-based COVID-19 diagnosis in collaborative
+edge-cloud settings, targeting accurate and computationally practical inference in resource-constrained
+healthcare environments.
+</p>
+
+<h2>Publications</h2>
+
+{% if site.author.googlescholar %}
+<p>For a complete citation list, see my <a href="{{ site.author.googlescholar }}">Google Scholar profile</a>.</p>
+{% endif %}
+
+{% for post in site.publications reversed %}
+  {% include archive-single.html %}
+{% endfor %}
+
+<h2>Ongoing Research</h2>
+<ul>
+  <li><strong>Do MLPs Inherit GNN Knowledge Uniformly? Class-Conditional Transfer Equity in Graph-Free Distillation.</strong> Revision submitted to Transactions on Machine Learning Research.</li>
+  <li><strong>Coarsened Graph Learning.</strong> Under review at Transactions on Machine Learning Research.</li>
+  <li><strong>The Hidden Privacy Cost of Graph-Free Inference: Connectivity Leakage in GNN-to-MLP Knowledge Distillation.</strong> Manuscript in preparation for ICLR 2027.</li>
+</ul>
