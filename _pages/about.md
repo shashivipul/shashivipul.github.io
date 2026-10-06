@@ -9,6 +9,8 @@ redirect_from:
 
 Namaste! I am **Vipul**, an AI researcher working on trustworthiness and scalability challenges in **Graph Machine Learning**, with a particular focus on fairness and robustness. I am currently a fifth-year PhD candidate in the Department of Electrical Engineering at the [Indian Institute of Technology Delhi](https://home.iitd.ac.in). My work spans graph deep learning, graph coarsening, medical image analytics, financial time-series, and knowledge distillation. Recently, I've been exploring the trustworthiness of LLMs and graph-language models. My research is advised by [Prof. Sandeep Kumar](https://sites.google.com/view/sandeepkr/home) and [Prof. Jayadeva](https://web.iitd.ac.in/~jayadeva/) at the [Machine Intelligence Signals and Networks (MISN) Lab](https://misn.iitd.ac.in). I am incredibly grateful and excited to mention that I have received the prestigious [Prime Minister’s Research Fellowship (PMRF)](https://www.pmrf.in) as part of my PhD journey.
 
+I have joined [Fujitsu Research](https://global.fujitsu/en-apac) as an intern in the AI lab, where I will be exploring the area of multi-agent systems, knowledge graphs, and dynamic graphs.
+
 I have joined the lab of [Prof. Tsuyoshi Murata](https://www.net.c.titech.ac.jp/murata.html) at the [Institute of Science Tokyo](https://www.isct.ac.jp/en) as a Visiting Junior Fellow from April 2026.
 
 Before starting my PhD, I completed my **M.Tech.** in the Department of Electrical Engineering at the [Indian Institute of Technology Patna](https://www.iitp.ac.in), where I worked on biomedical signal and image processing under the supervision of [Prof. Maheshkumar H. Kolekar](https://www.iitp.ac.in/~mahesh/). I earned my **B.Tech.** in Electronics and Communication Engineering from the [Dr. A.P.J. Abdul Kalam Technical University (AKTU)](https://aktu.ac.in).
@@ -50,6 +52,8 @@ Before starting my PhD, I completed my **M.Tech.** in the Department of Electric
 
 
 ## 📰 Updates
+- **[Sep 2026]** 🏆🎓 Joined [Fujitsu Research](https://global.fujitsu/en-apac) as Intern.
+- **[Sep 2026]** 🏆📄 Paper accepted at [Transactions on machine Learning Research](https://jmlr.org/tmlr/)
 - **[Aug 2026]** 🎓 Pre-PhD Synopsis Presentation completed!FINAL phase of PhD research.
 - **[Jun 2026]** 🏆📄 Paper accepted at [MICCAI 2026](https://conferences.miccai.org/2026/en/default.asp)
 - **[Apr 2026]** 🎓✈️ Joined Institute of Science Tokyo with LOTUS Fellowship
