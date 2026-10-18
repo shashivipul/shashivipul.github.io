@@ -11,7 +11,7 @@ Namaste! I am **Vipul**, an AI researcher working on trustworthiness and scalabi
 
 I have joined [Fujitsu Research](https://global.fujitsu/en-apac) as an intern in the AI lab, where I will be exploring the area of multi-agent systems, knowledge graphs, and dynamic graphs.
 
-I have joined the lab of [Prof. Tsuyoshi Murata](https://www.net.c.titech.ac.jp/murata.html) at the [Institute of Science Tokyo](https://www.isct.ac.jp/en) as a Visiting Junior Fellow from April 2026.
+I was a Visiting Junior Fellow in the lab of [Prof. Tsuyoshi Murata](https://www.net.c.titech.ac.jp/murata.html) at the [Institute of Science Tokyo](https://www.isct.ac.jp/en) from April to August 2026.
 
 Before starting my PhD, I completed my **M.Tech.** in the Department of Electrical Engineering at the [Indian Institute of Technology Patna](https://www.iitp.ac.in), where I worked on biomedical signal and image processing under the supervision of [Prof. Maheshkumar H. Kolekar](https://www.iitp.ac.in/~mahesh/). I earned my **B.Tech.** in Electronics and Communication Engineering from the [Dr. A.P.J. Abdul Kalam Technical University (AKTU)](https://aktu.ac.in).
 
