@@ -2,6 +2,9 @@
 # To add a paper, copy an entry and edit it. Entries appear in the order listed
 # within each type. "type" must be one of: journal, conference, workshop.
 # Wrap your own name in <b>...</b> to highlight it.
+# Optional "image": a framework figure or key result shown under the badge.
+#   Put the file in images/papers/ and write just the file name, e.g.
+#   image: faith-aaai26.png   (PNG/JPG, ~800px wide works well)
 
 - type: conference
   tag: AAAI

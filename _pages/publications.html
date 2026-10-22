@@ -29,7 +29,12 @@ author_profile: true
     <ol class="pub-list">
     {% for p in items %}
       <li class="pub">
-        <span class="pub__tag pub__tag--{{ p.type }}">{{ p.tag }}{% if p.year %} {{ p.year }}{% endif %}</span>
+        <div class="pub__side">
+          <span class="pub__tag pub__tag--{{ p.type }}">{{ p.tag }}{% if p.year %} {{ p.year }}{% endif %}</span>
+          {% if p.image %}<button type="button" class="pub__thumb" data-full="{{ base_path }}/images/papers/{{ p.image }}" data-caption="{{ p.title | escape }}" aria-label="Enlarge figure">
+            <img src="{{ base_path }}/images/papers/{{ p.image }}" alt="Figure from: {{ p.title | escape }}" loading="lazy">
+          </button>{% endif %}
+        </div>
         <div class="pub__body">
           <div class="pub__title">
             {% if p.url %}<a href="{{ p.url }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}
@@ -66,7 +71,33 @@ author_profile: true
 
 </div>
 
+<div class="pub-lightbox" hidden role="dialog" aria-label="Paper figure">
+  <button type="button" class="pub-lightbox__close" aria-label="Close">×</button>
+  <figure><img src="" alt=""><figcaption></figcaption></figure>
+</div>
+
 <script>
+(function () {
+  /* Click a paper figure to see it full size */
+  var lb = document.querySelector('.pub-lightbox');
+  if (lb) {
+    var close = function () { lb.hidden = true; document.body.style.overflow = ''; };
+    document.querySelectorAll('.pub__thumb').forEach(function (b) {
+      b.addEventListener('click', function () {
+        lb.querySelector('img').src = b.getAttribute('data-full');
+        lb.querySelector('img').alt = b.querySelector('img').alt;
+        lb.querySelector('figcaption').textContent = b.getAttribute('data-caption');
+        lb.hidden = false;
+        document.body.style.overflow = 'hidden';
+        lb.querySelector('.pub-lightbox__close').focus();
+      });
+    });
+    lb.querySelector('.pub-lightbox__close').addEventListener('click', close);
+    lb.addEventListener('click', function (e) { if (e.target === lb || e.target.tagName === 'FIGURE') close(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !lb.hidden) close(); });
+  }
+})();
+
 (function () {
   var root = document.querySelector('.research');
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
