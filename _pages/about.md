@@ -96,26 +96,11 @@ Earlier, I was a Visiting Junior Fellow with [Prof. Tsuyoshi Murata](https://www
 
 
 
-## 📰 Updates
-- **[Oct 2026]** 🏆🎓 Joined [Fujitsu Research](https://global.fujitsu/en-apac) as Intern.
-- **[Sep 2026]** 🏆📄 Paper accepted at [Transactions on machine Learning Research](https://jmlr.org/tmlr/)
-- **[Aug 2026]** 🎓 Pre-PhD Synopsis Presentation completed!FINAL phase of PhD research.
-- **[Jun 2026]** 🏆📄 Paper accepted at [MICCAI 2026](https://conferences.miccai.org/2026/en/default.asp)
-- **[Apr 2026]** 🎓✈️ Joined Institute of Science Tokyo with LOTUS Fellowship
-- **[Dec 2025]** 🏆📄 Paper accepted at [IEEE Transactions on AI](https://cis.ieee.org/publications/ieee-transactions-on-artificial-intelligence)
-- **[Nov 2025]** 🎓✈️ Received [ACM Travel Grant](https://www.iarcs.org.in/activities/grants.php) to attend AAAI 2026 in Singapore 🇸🇬
-- **[Nov 2025]** 🌸🇯🇵 Selected for the [LOTUS Fellowship](https://www.jst.go.jp/program/india/en/) (JST, Japan)
-- **[Nov 2025]** 🏆📄 Paper accepted at [AAAI 2026](https://aaai.org/conference/aaai/aaai-26/) (Main Track)
-- **[Nov 2025]** 🏆📄 Paper accepted at [AAAI 2026](https://neuroai-multimodal-workshop.github.io) (NeuroAI Workshop)
-- **[Oct 2025]** 🎓✈️ Received [IEEE CIS Student Travel Grant](https://cis.ieee.org/activities/membership-activities/travel-grants) to attend IEEE DSAA 2026 in United Kingdom 🇬🇧
-- **[Jun 2025]** 🏆📄 Paper accepted at [IEEE DSAA 2025](https://dsaa.ieee.org/2025/)
+## 📢 Recent News
 
-
-
-
-
-
-
+<div class="news-box" tabindex="0" aria-label="Recent news (scrollable)">
+{% for item in site.data.news %}<p class="news-item"><b class="news-date">{{ item.date }}</b><span class="news-sep">—</span><span class="news-text">{% if item.icon %}{{ item.icon }} {% endif %}{{ item.text | markdownify | remove: '<p>' | remove: '</p>' | strip }}</span></p>
+{% endfor %}</div>
 
 <script>
 (function () {
@@ -132,13 +117,26 @@ Earlier, I was a Visiting Junior Fellow with [Prof. Tsuyoshi Murata](https://www
   aff.querySelectorAll('.affil').forEach(function (a) {
     if (/present/i.test(a.querySelector('.affil__years').textContent)) a.classList.add('is-current');
   });
-  var updates = Array.prototype.find.call(root.querySelectorAll('h2'), function (h) { return /updates/i.test(h.textContent); });
-  var updList = updates && updates.nextElementSibling;
-  if (updList && updList.tagName === 'UL' && updList.firstElementChild) {
+  var updates = Array.prototype.find.call(root.querySelectorAll('h2'), function (h) { return /news|updates/i.test(h.textContent); });
+  var newsBox = root.querySelector('.news-box');
+  var newsItems = newsBox ? newsBox.querySelectorAll('.news-item') : [];
+  if (newsItems.length) {
     var badge = document.createElement('span');
     badge.className = 'home-new';
     badge.textContent = 'NEW';
-    updList.firstElementChild.appendChild(badge);
+    newsItems[0].appendChild(badge);
+  }
+
+  /* Recent News: back to the newest item whenever the visitor leaves the page
+     (switches tab, navigates away and returns) or scrolls the box out of view */
+  function resetNews() { if (newsBox) newsBox.scrollTop = 0; }
+  window.addEventListener('pageshow', resetNews);
+  window.addEventListener('pagehide', resetNews);
+  document.addEventListener('visibilitychange', function () { if (document.hidden) resetNews(); });
+  if (newsBox && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries) {
+      if (!entries[0].isIntersecting) resetNews();
+    }).observe(newsBox);
   }
 
   if (reduce || !('IntersectionObserver' in window)) return;
@@ -157,7 +155,8 @@ Earlier, I was a Visiting Junior Fellow with [Prof. Tsuyoshi Murata](https://www
   stagger(aff.querySelectorAll('.affil'), 110, 250);
   if (social) stagger(social.querySelectorAll('a'), 80, 150);
   if (updates) stagger([updates], 0);
-  if (updList) stagger(updList.children, 60);
+  if (newsBox) stagger([newsBox], 0);
+  stagger(newsItems, 60);
 
   /* Play the reveal every time an element enters the screen, and reset it
      when it leaves, so it animates again on scroll up or down */

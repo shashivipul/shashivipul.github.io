@@ -1,0 +1,54 @@
+# =============================================================================
+#  Recent News on the Home page — newest first.
+#  To add news, copy an entry to the TOP of the list and edit it.
+#  "text" supports Markdown: [link text](https://...), **bold**, *italic*.
+#  The newest item automatically gets a "NEW" badge.
+# =============================================================================
+
+- date: "Oct 2026"
+  icon: "🏆🎓"
+  text: "Joined [Fujitsu Research](https://global.fujitsu/en-apac) as Intern."
+
+- date: "Sep 2026"
+  icon: "🏆📄"
+  text: "Paper accepted at [Transactions on Machine Learning Research](https://jmlr.org/tmlr/)"
+
+- date: "Aug 2026"
+  icon: "🎓"
+  text: "Pre-PhD Synopsis Presentation completed! Entering the final phase of my Ph.D."
+
+- date: "Jun 2026"
+  icon: "🏆📄"
+  text: "Paper accepted at [MICCAI 2026](https://conferences.miccai.org/2026/en/default.asp)"
+
+- date: "Apr 2026"
+  icon: "🎓✈️"
+  text: "Joined Institute of Science Tokyo with LOTUS Fellowship"
+
+- date: "Dec 2025"
+  icon: "🏆📄"
+  text: "Paper accepted at [IEEE Transactions on AI](https://cis.ieee.org/publications/ieee-transactions-on-artificial-intelligence)"
+
+- date: "Nov 2025"
+  icon: "🎓✈️"
+  text: "Received [ACM Travel Grant](https://www.iarcs.org.in/activities/grants.php) to attend AAAI 2026 in Singapore 🇸🇬"
+
+- date: "Nov 2025"
+  icon: "🌸🇯🇵"
+  text: "Selected for the [LOTUS Fellowship](https://www.jst.go.jp/program/india/en/) (JST, Japan)"
+
+- date: "Nov 2025"
+  icon: "🏆📄"
+  text: "Paper accepted at [AAAI 2026](https://aaai.org/conference/aaai/aaai-26/) (Main Track)"
+
+- date: "Nov 2025"
+  icon: "🏆📄"
+  text: "Paper accepted at [AAAI 2026](https://neuroai-multimodal-workshop.github.io) (NeuroAI Workshop)"
+
+- date: "Oct 2025"
+  icon: "🎓✈️"
+  text: "Received [IEEE CIS Student Travel Grant](https://cis.ieee.org/activities/membership-activities/travel-grants) to attend IEEE DSAA 2026 in United Kingdom 🇬🇧"
+
+- date: "Jun 2025"
+  icon: "🏆📄"
+  text: "Paper accepted at [IEEE DSAA 2025](https://dsaa.ieee.org/2025/)"

@@ -199,3 +199,58 @@
   .home-social a i,
   .home > h2 + ul li { transition: none; }
 }
+
+/* ==========================================================================
+   Recent News: compact scrollable box
+   ========================================================================== */
+
+.news-box {
+  position: relative;
+  max-height: 290px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  margin: 0.6em 0 1.6em;
+  padding: 0.9em 1.15em 0.3em;
+  border: 1px solid var(--global-border-color);
+  border-radius: 10px;
+  background: rgba(47, 127, 147, 0.03);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(47, 127, 147, 0.45) transparent;
+  /* soft fade at the bottom hints that the box scrolls */
+  -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 28px), transparent);
+          mask-image: linear-gradient(to bottom, #000 calc(100% - 28px), transparent);
+  padding-bottom: 1.4em;
+
+  &::-webkit-scrollbar { width: 6px; }
+  &::-webkit-scrollbar-thumb { background: rgba(47, 127, 147, 0.45); border-radius: 6px; }
+
+  &:focus-visible { outline: 2px solid rgba(47, 127, 147, 0.5); outline-offset: 2px; }
+}
+
+.news-item {
+  margin: 0 0 0.75em !important;
+  font-size: 0.9em;
+  line-height: 1.5;
+  transition: transform 0.2s ease;
+
+  &:hover { transform: translateX(3px); }
+}
+
+.news-date {
+  color: #2f7f93;
+  white-space: nowrap;
+}
+
+.news-sep {
+  margin: 0 0.45em;
+  color: var(--global-text-color-light);
+}
+
+html[data-theme="dark"] {
+  .news-box { background: rgba(255, 255, 255, 0.03); }
+  .news-date { color: #6cc7da; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .news-item { transition: none; }
+}
