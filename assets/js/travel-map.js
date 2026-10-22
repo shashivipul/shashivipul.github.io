@@ -139,7 +139,11 @@
   var mapIds = {};
   visited.forEach(function (c) { if (c.map_id) mapIds[String(c.map_id).padStart(3, '0')] = c.id; });
 
-  d3.json(BASE + '/assets/data/world-50m.json').then(function (world) {
+  /* Country borders: Natural Earth 1:10m "India point of view" dataset, which
+     shows India's boundaries as officially recognised by the Government of India
+     (all of Jammu & Kashmir and Ladakh, including PoK, Gilgit-Baltistan and
+     Aksai Chin, and all of Arunachal Pradesh). Public domain, simplified for web. */
+  d3.json(BASE + '/assets/data/world-india-pov.json').then(function (world) {
     var land = topojson.feature(world, world.objects.countries).features;
     gMap.selectAll('path.tv-land').data(land).enter().append('path')
       .attr('class', function (f) { return 'tv-land' + (mapIds[f.id] ? ' is-visited' : ''); })
