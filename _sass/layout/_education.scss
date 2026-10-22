@@ -1,0 +1,291 @@
+/* ==========================================================================
+   Education page: animated timeline with logos
+   ========================================================================== */
+
+$edu-accent: #2f7f93;
+$edu-rail-x: 11px;
+
+.edu-timeline {
+  position: relative;
+  margin: 1.5em 0 2em;
+  padding-left: 2.6em;
+
+  &__rail {
+    position: absolute;
+    top: 0.6em;
+    bottom: 0.6em;
+    left: $edu-rail-x;
+    width: 2px;
+    background: var(--global-border-color);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  &__progress {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, $edu-accent, mix(#fff, $edu-accent, 35%));
+    transform-origin: top;
+    transform: scaleY(1);
+  }
+
+  @media (max-width: 600px) {
+    padding-left: 1.9em;
+    &__rail { left: 6px; }
+  }
+}
+
+.edu {
+  position: relative;
+  margin-bottom: 1.4em;
+
+  &:last-child { margin-bottom: 0; }
+
+  /* Dot on the timeline */
+  &__marker {
+    position: absolute;
+    top: 1.55em;
+    left: calc(-2.6em + #{$edu-rail-x} - 6px);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #fff;
+    border: 3px solid $edu-accent;
+    box-sizing: border-box;
+    z-index: 1;
+
+    @media (max-width: 600px) {
+      left: calc(-1.9em + 6px - 6px);
+    }
+  }
+
+  &--current &__marker {
+    background: $edu-accent;
+    animation: edu-pulse 2s ease-out infinite;
+  }
+
+  &__card {
+    display: flex;
+    align-items: center;
+    gap: 1.4em;
+    padding: 1.15em 1.3em;
+    border: 1px solid var(--global-border-color);
+    border-radius: 10px;
+    background: var(--global-bg-color, #fff);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      border-color: rgba(47, 127, 147, 0.35);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.07);
+
+      .edu__logo img { transform: scale(1.06); }
+    }
+  }
+
+  &__text {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__years {
+    display: inline-block;
+    margin-bottom: 0.35em;
+    padding: 0.12em 0.65em;
+    border-radius: 999px;
+    background: rgba(47, 127, 147, 0.1);
+    color: $edu-accent;
+    font-size: 0.72em;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+  }
+
+  &__degree {
+    margin: 0 0 0.15em !important;
+    padding: 0 !important;
+    border: 0 !important;
+    font-size: 1.05em !important;
+    line-height: 1.35;
+  }
+
+  &__inst {
+    font-size: 0.88em;
+    font-weight: 600;
+    color: var(--global-text-color);
+    opacity: 0.85;
+  }
+
+  &__aside {
+    font-weight: 400;
+    opacity: 0.8;
+  }
+
+  &__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25em 1.4em;
+    margin: 0.55em 0 0 !important;
+    padding: 0 !important;
+    list-style: none;
+    font-size: 0.8em;
+
+    li {
+      margin: 0 !important;
+    }
+
+    span {
+      margin-right: 0.45em;
+      font-size: 0.85em;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--global-text-color-light);
+    }
+  }
+
+  &__thesis {
+    margin: 0.5em 0 0 !important;
+    padding-left: 0.8em;
+    border-left: 2px solid rgba(47, 127, 147, 0.35);
+    font-size: 0.82em;
+    font-style: italic;
+    line-height: 1.5;
+
+    span {
+      display: block;
+      font-style: normal;
+      font-size: 0.85em;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--global-text-color-light);
+    }
+  }
+
+  /* Logo on the right */
+  &__logo {
+    flex: 0 0 92px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 92px;
+    text-decoration: none !important;
+
+    img {
+      max-width: 88px;
+      max-height: 88px;
+      object-fit: contain;
+      transition: transform 0.35s ease;
+    }
+
+    &--mark img { max-height: 70px; }
+  }
+
+  /* Classic monogram used until a logo file is added */
+  &__monogram {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    border: 2px solid $edu-accent;
+    box-shadow: inset 0 0 0 4px #fff, inset 0 0 0 5px rgba(47, 127, 147, 0.5);
+    color: $edu-accent;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 0.95em;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+
+  &__logo.is-missing {
+    img { display: none; }
+    .edu__monogram { display: flex; }
+  }
+
+  @media (max-width: 600px) {
+    &__card {
+      gap: 0.9em;
+      padding: 1em;
+    }
+    &__logo {
+      flex-basis: 58px;
+      height: 58px;
+      align-self: flex-start;
+
+      img { max-width: 56px; max-height: 56px; }
+      &--mark img { max-height: 46px; }
+    }
+    &__monogram {
+      width: 54px;
+      height: 54px;
+      font-size: 0.7em;
+    }
+  }
+}
+
+@keyframes edu-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(47, 127, 147, 0.5); }
+  70%  { box-shadow: 0 0 0 9px rgba(47, 127, 147, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(47, 127, 147, 0); }
+}
+
+/* --------------------------------------------------------------------------
+   Scroll animations (only when JS is on and motion is allowed)
+   -------------------------------------------------------------------------- */
+
+.edu-timeline--animate {
+  .edu__marker {
+    transform: scale(0);
+    transition: transform 0.45s cubic-bezier(0.3, 1.6, 0.5, 1);
+  }
+  .edu__card {
+    opacity: 0;
+    transform: translateX(-28px);
+    transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1),
+                box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+  .edu__logo {
+    opacity: 0;
+    transform: translateX(24px) scale(0.85);
+    transition: opacity 0.7s ease 0.25s, transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) 0.25s;
+  }
+  .edu__years,
+  .edu__degree,
+  .edu__inst,
+  .edu__meta,
+  .edu__thesis {
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .edu.is-visible {
+    .edu__marker { transform: none; }
+    .edu__card { opacity: 1; transform: none; }
+    .edu__card:hover { transform: translateY(-3px); }
+    .edu__logo { opacity: 1; transform: none; }
+    .edu__years,
+    .edu__degree,
+    .edu__inst,
+    .edu__meta,
+    .edu__thesis { opacity: 1; transform: none; }
+    .edu__years  { transition-delay: 0.15s; }
+    .edu__degree { transition-delay: 0.22s; }
+    .edu__inst   { transition-delay: 0.29s; }
+    .edu__meta   { transition-delay: 0.36s; }
+    .edu__thesis { transition-delay: 0.43s; }
+  }
+
+  .edu-timeline__progress {
+    transform: scaleY(0);
+    transition: transform 0.15s linear;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .edu--current .edu__marker { animation: none; }
+  .edu__card,
+  .edu__logo img { transition: none; }
+  .edu__card:hover { transform: none; }
+}
