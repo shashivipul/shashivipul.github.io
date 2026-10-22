@@ -312,7 +312,7 @@ $research-accent: #2f7f93;
    ========================================================================== */
 
 .pub__side {
-  flex: 0 0 9.5em;
+  flex: 0 0 12em;
   display: flex;
   flex-direction: column;
   gap: 0.55em;
@@ -335,7 +335,7 @@ $research-accent: #2f7f93;
     display: block;
     width: 100%;
     height: auto;
-    max-height: 120px;
+    max-height: 150px;
     object-fit: contain;
     background: #fff;
   }
