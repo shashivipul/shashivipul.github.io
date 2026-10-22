@@ -42,8 +42,8 @@ tiles:
 
   - icon: "🧠"
     title: Healthcare Analytics & Network Neuroscience
-    keywords: [fMRI brain connectomes, Equity-aware self-supervision, Robust BOLD analysis, COVID-19 CT diagnosis]
-    venues: MICCAI · ML4H · MTAP
+    keywords: [fMRI brain connectomes, Equity-aware self-supervision, Robust BOLD analysis, COVID-19 CT diagnosis, ECG arrhythmia classification]
+    venues: MICCAI · ML4H · MTAP · ICMLDE
     color: rose
     link: /publications/
 

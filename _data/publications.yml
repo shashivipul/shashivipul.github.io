@@ -39,6 +39,24 @@
   url: "https://doi.org/10.1109/DSAA65442.2025.11247963"
   label: DOI
 
+- type: conference
+  tag: ICMLDE
+  year: 2025
+  title: "Extreme Gradient Boosting Algorithm for Automatic Cardiac Arrhythmia Classification"
+  authors: "<b>Singh, V.K.</b>, Barman, J., and Kolekar, M.H."
+  venue: "International Conference on Machine Learning and Data Engineering (ICMLDE), Procedia Computer Science 258:1466–1475"
+  url: "https://doi.org/10.1016/j.procs.2025.04.379"
+  label: DOI
+
+- type: conference
+  tag: ICMLDE
+  year: 2025
+  title: "Automated Machine Learning Approach for COVID-19 Diagnosis Based on Deep Efficient Features from Chest CT Images"
+  authors: "<b>Singh, V.K.</b>, Barman, J., and Kolekar, M.H."
+  venue: "International Conference on Machine Learning and Data Engineering (ICMLDE), Procedia Computer Science 258:1414–1424"
+  url: "https://doi.org/10.1016/j.procs.2025.04.374"
+  label: DOI
+
 - type: journal
   tag: TMLR
   year: 2026
