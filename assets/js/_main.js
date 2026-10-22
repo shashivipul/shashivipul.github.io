@@ -16,7 +16,7 @@ let determineComputedTheme = () => {
   if (themeSetting != "system") {
     return themeSetting;
   }
-  return (userPref && userPref("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
+  return "light";   // site default is light, whatever the OS setting
 };
 
 // detect OS/browser preference
@@ -28,7 +28,7 @@ let setTheme = (theme) => {
     theme ||
     localStorage.getItem("theme") ||
     $("html").attr("data-theme") ||
-    browserPref;
+    "light";          // default to light even if the OS is in dark mode
 
   if (use_theme === "dark") {
     $("html").attr("data-theme", "dark");
@@ -90,14 +90,9 @@ $(document).ready(function () {
   const scssLarge = 925;          // pixels, from /_sass/_themes.scss
   const scssMastheadHeight = 70;  // pixels, from the current theme (e.g., /_sass/theme/_default.scss)
 
-  // If the user hasn't chosen a theme, follow the OS preference
+  // Light by default; only the toggle (saved in localStorage) switches to dark.
+  // The OS dark-mode setting is intentionally ignored.
   setTheme();
-  window.matchMedia('(prefers-color-scheme: dark)')
-        .addEventListener("change", (e) => {
-          if (!localStorage.getItem("theme")) {
-            setTheme(e.matches ? "dark" : "light");
-          }
-        });
 
   // Enable the theme toggle
   $('#theme-toggle').on('click', toggleTheme);

@@ -1,0 +1,65 @@
+/* ==========================================================================
+   Dark mode adjustments for the custom Home, Research, Education and
+   Travel sections (only applies after a visitor switches to dark)
+   ========================================================================== */
+
+$dk-accent: #6cc7da;
+
+html[data-theme="dark"] {
+
+  /* Logos: give them a soft light backing so dark-coloured marks stay visible */
+  .affil__logo img,
+  .edu__logo img {
+    padding: 6px;
+    border-radius: 12px;
+    background: #f4f6f7;
+    box-sizing: content-box;
+  }
+  .affil__logo--crest img,
+  .edu__logo:not(.edu__logo--mark) img {
+    border-radius: 50%;
+  }
+  .affil__logo img { max-height: 72px; }
+  .affil__logo--crest img { height: 72px; }
+  .edu__logo img { max-width: 76px; max-height: 76px; }
+
+  /* Brighter accent so teal text stays readable on dark */
+  .affil__years,
+  .edu__years,
+  .research__stat-num,
+  .travel-stats span,
+  .travel-gallery__trips span,
+  .research__area-venues span {
+    color: $dk-accent;
+  }
+  .edu__years,
+  .travel-gallery__trips span,
+  .research__area-venues span {
+    background: rgba(108, 199, 218, 0.14);
+  }
+  .affil.is-current .affil__years::before { background: $dk-accent; }
+
+  .edu__marker { background: var(--global-bg-color); border-color: $dk-accent; }
+  .edu--current .edu__marker { background: $dk-accent; }
+  .edu__thesis { border-left-color: rgba(108, 199, 218, 0.45); }
+  .edu__monogram { color: $dk-accent; border-color: $dk-accent; box-shadow: none; }
+  .edu-timeline__progress { background: linear-gradient(to bottom, $dk-accent, rgba(108, 199, 218, 0.5)); }
+
+  .affil:hover,
+  .pub:hover { background: rgba(255, 255, 255, 0.04); }
+  .edu__card:hover,
+  .research__area:hover { box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35); }
+
+  .home > p strong {
+    background-image: linear-gradient(transparent 62%, rgba(108, 199, 218, 0.28) 62%);
+  }
+  .home-social a:hover .fa-github { color: #ffffff; }
+
+  .research__filters button.is-active,
+  .pub__tag--conference { background: #2f8fa5; border-color: #2f8fa5; }
+
+  .travel-chips button.is-active { border-color: $dk-accent; background: rgba(108, 199, 218, 0.14); }
+  .travel-chips__count { background: #2f8fa5; }
+  .travel-gallery__empty { background: rgba(255, 255, 255, 0.05); }
+  .travel-map { box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45); }
+}
