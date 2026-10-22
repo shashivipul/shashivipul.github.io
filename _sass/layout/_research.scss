@@ -191,3 +191,12 @@ $research-accent: #2f7f93;
     &__tag { flex: none; }
   }
 }
+
+.research__area--current {
+  border-left-color: #c0392b;
+
+  .research__area-venues span {
+    background: rgba(192, 57, 43, 0.1);
+    color: #c0392b;
+  }
+}
