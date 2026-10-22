@@ -60,6 +60,17 @@ Earlier, I was a Visiting Junior Fellow with [Prof. Tsuyoshi Murata](https://www
 </div>
 
 
+## 🔍 Research Interests
+
+<div class="interests">
+{% for t in site.data.interests.tiles %}<a class="interest interest--{{ t.color | default: 'teal' }}{% if t.current %} is-current{% endif %}" href="{{ t.link | default: '#' }}"><span class="interest__icon" aria-hidden="true">{{ t.icon }}</span><span class="interest__title">{{ t.title }}{% if t.current %} <em class="interest__now">Now</em>{% endif %}</span><span class="interest__keys">{% for k in t.keywords %}<span>{{ k }}</span>{% endfor %}</span>{% if t.venues %}<span class="interest__venues">{{ t.venues }}</span>{% endif %}<svg class="interest__motif" viewBox="0 0 64 64" aria-hidden="true"><g class="interest__edges"><line x1="14" y1="16" x2="40" y2="12"/><line x1="40" y1="12" x2="50" y2="38"/><line x1="14" y1="16" x2="26" y2="42"/><line x1="26" y1="42" x2="50" y2="38"/><line x1="40" y1="12" x2="26" y2="42"/></g><g class="interest__nodes"><circle cx="14" cy="16" r="4"/><circle cx="40" cy="12" r="5"/><circle cx="50" cy="38" r="4"/><circle cx="26" cy="42" r="6"/></g></svg></a>
+{% endfor %}</div>
+
+<details class="interests-summary">
+<summary>📚 Brief research summary <span>(click to expand)</span></summary>
+<div class="interests-summary__body">{{ site.data.interests.summary | markdownify }}</div>
+</details>
+
 ## 📢 Recent News
 
 <div class="news-box" tabindex="0" aria-label="Recent news (scrollable)">
@@ -117,6 +128,8 @@ Earlier, I was a Visiting Junior Fellow with [Prof. Tsuyoshi Murata](https://www
     return el.tagName === 'P' && !el.closest('.affiliations');
   }), 120);
   stagger(aff.querySelectorAll('.affil'), 110, 250);
+  stagger(root.querySelectorAll('.interest'), 90);
+  stagger(root.querySelectorAll('.interests-summary'), 0);
   if (social) stagger(social.querySelectorAll('a'), 80, 150);
   if (updates) stagger([updates], 0);
   if (newsBox) stagger([newsBox], 0);

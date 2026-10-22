@@ -1,0 +1,55 @@
+# =============================================================================
+#  Research Interests tiles on the Home page.
+#  Each tile: an emoji icon, a title, a few keywords, and where the work
+#  appeared. "color" picks the tile's accent: teal, indigo, rose, amber, violet.
+#  Set "current: true" to mark what you are working on right now.
+#  "link" is where the tile goes when clicked (optional).
+# =============================================================================
+
+summary: >-
+  My research develops theoretical and optimization-driven methods for
+  **trustworthy machine learning** on graph-structured and biomedical data:
+  systems that stay *fair*, *robust*, *privacy-aware*, *well-calibrated* and
+  *efficient* when they leave the lab. During my Ph.D. this has meant
+  certifiably robust and fair graph neural networks, fairness-aware GNN-to-MLP
+  knowledge distillation for fast graph-free inference, optimization-based
+  graph coarsening, and equity-aware self-supervised learning for neuroimaging.
+  At Fujitsu Research, I am carrying these questions to systems that evolve
+  over time: self-evolving AI agents and anomaly detection in dynamic graphs.
+
+tiles:
+  - icon: "🤖"
+    title: Agents & Dynamic Graphs
+    keywords: [Self-evolving AI agents, Flow matching, Anomaly detection in dynamic graphs]
+    venues: Fujitsu Research
+    color: violet
+    current: true
+    link: /publications/#areas
+
+  - icon: "🛡️"
+    title: Trustworthy Graph Learning
+    keywords: [Certified robustness, Fairness in GNNs, Privacy leakage]
+    venues: IEEE TSP · AAAI
+    color: teal
+    link: /publications/#areas
+
+  - icon: "⚡"
+    title: Efficient & Scalable GraphML
+    keywords: [GNN-to-MLP distillation, Graph coarsening, Graph-free inference]
+    venues: AAAI · TMLR · DSAA
+    color: amber
+    link: /publications/#areas
+
+  - icon: "🧠"
+    title: Biomedical & Neuro AI
+    keywords: [fMRI connectomes, Equity-aware self-supervision, Robust BOLD analysis]
+    venues: MICCAI · ML4H
+    color: rose
+    link: /publications/#areas
+
+  - icon: "💬"
+    title: Graph–Language Models
+    keywords: [Graph–LLM alignment, Tabular LLMs for EHR, Calibration & uncertainty]
+    venues: AAAI Workshop
+    color: indigo
+    link: /publications/#areas

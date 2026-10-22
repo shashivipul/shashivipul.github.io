@@ -254,3 +254,240 @@ html[data-theme="dark"] {
 @media (prefers-reduced-motion: reduce) {
   .news-item { transition: none; }
 }
+
+/* ==========================================================================
+   Research Interests tiles
+   ========================================================================== */
+
+$int-colors: (
+  teal:   #2f7f93,
+  indigo: #4c5fd5,
+  rose:   #d6456b,
+  amber:  #c97f12,
+  violet: #7c4dcc
+);
+
+.interests {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85em;
+  margin: 0.8em 0 1em;
+
+  @media (max-width: 600px) { grid-template-columns: 1fr; }
+}
+
+.interest {
+  --c: #2f7f93;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35em;
+  overflow: hidden;
+  padding: 0.95em 1.1em 0.9em 1.15em;
+  border: 1px solid var(--global-border-color);
+  border-left: 4px solid var(--c);
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0) 40%, var(--tint) 100%);
+  color: var(--global-text-color) !important;
+  text-decoration: none !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+
+  @each $name, $c in $int-colors {
+    &--#{$name} {
+      --c: #{$c};
+      --tint: #{rgba($c, 0.09)};
+      --chip: #{rgba($c, 0.1)};
+    }
+  }
+
+  /* the current focus spans the full row */
+  &.is-current {
+    grid-column: 1 / -1;
+    background: linear-gradient(120deg, var(--tint), rgba(255, 255, 255, 0) 70%);
+  }
+
+  &__icon {
+    font-size: 1.45em;
+    line-height: 1;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 1em;
+    color: var(--c);
+    line-height: 1.3;
+  }
+
+  &__now {
+    display: inline-block;
+    margin-left: 0.35em;
+    padding: 0.05em 0.55em;
+    border-radius: 999px;
+    background: var(--c);
+    color: #fff;
+    font-style: normal;
+    font-size: 0.66em;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    vertical-align: 0.15em;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 0.45em;
+      height: 0.45em;
+      margin-right: 0.35em;
+      border-radius: 50%;
+      background: #fff;
+      vertical-align: 0.08em;
+      animation: interest-blink 1.6s ease-in-out infinite;
+    }
+  }
+
+  &__keys {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3em;
+    position: relative;
+    z-index: 1;
+
+    span {
+      padding: 0.15em 0.55em;
+      border-radius: 999px;
+      background: var(--chip);
+      font-size: 0.74em;
+      line-height: 1.4;
+      transition: background-color 0.25s ease, color 0.25s ease;
+    }
+  }
+
+  &__venues {
+    margin-top: 0.15em;
+    font-size: 0.7em;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--global-text-color-light);
+  }
+
+  /* little graph in the corner */
+  &__motif {
+    position: absolute;
+    top: 0.5em;
+    right: 0.6em;
+    width: 54px;
+    height: 54px;
+    opacity: 0.28;
+    transition: opacity 0.35s ease, transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+
+    line { stroke: var(--c); stroke-width: 1.6; }
+    circle {
+      fill: var(--c);
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+  }
+
+  &:hover,
+  &:focus-visible {
+    transform: translateY(-4px);
+    border-color: var(--c);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.08);
+
+    .interest__keys span { background: var(--c); color: #fff; }
+    .interest__motif { opacity: 0.6; transform: rotate(12deg) scale(1.08); }
+    .interest__motif circle { animation: interest-node 1.4s ease-in-out infinite; }
+    .interest__motif circle:nth-child(2) { animation-delay: 0.2s; }
+    .interest__motif circle:nth-child(3) { animation-delay: 0.4s; }
+    .interest__motif circle:nth-child(4) { animation-delay: 0.6s; }
+  }
+}
+
+@keyframes interest-node {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.35); }
+}
+@keyframes interest-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* Expandable research summary */
+.interests-summary {
+  margin: 0 0 1.6em;
+
+  summary {
+    cursor: pointer;
+    width: fit-content;
+    color: #2f7f93;
+    font-size: 0.88em;
+    font-weight: 700;
+    list-style: none;
+
+    &::-webkit-details-marker { display: none; }
+    &::before {
+      content: "▸";
+      display: inline-block;
+      margin-right: 0.4em;
+      transition: transform 0.25s ease;
+    }
+    span {
+      font-size: 0.85em;
+      font-weight: 400;
+      color: var(--global-text-color-light);
+    }
+  }
+
+  &[open] summary::before { transform: rotate(90deg); }
+
+  &__body {
+    margin-top: 0.6em;
+    padding: 0.8em 1em;
+    border-radius: 10px;
+    background: rgba(47, 127, 147, 0.05);
+    font-size: 0.9em;
+    text-align: justify;
+    hyphens: auto;
+
+    p { margin: 0; }
+  }
+
+  &[open] &__body { animation: interest-open 0.35s ease; }
+}
+@keyframes interest-open {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: none; }
+}
+
+html[data-theme="dark"] {
+  .interest {
+    @each $name, $c in $int-colors {
+      &--#{$name} {
+        --c: #{mix(#fff, $c, 35%)};
+        --tint: #{rgba($c, 0.18)};
+        --chip: #{rgba($c, 0.22)};
+      }
+    }
+    &:hover .interest__keys span { color: #111; }
+  }
+  .interests-summary summary { color: #6cc7da; }
+  .interests-summary__body { background: rgba(255, 255, 255, 0.04); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .interest,
+  .interest__motif { transition: none; }
+  .interest:hover { transform: none; }
+  .interest__motif circle,
+  .interest__now::before { animation: none !important; }
+}
+
+/* keep hover lifts working after the scroll-reveal has played */
+.home--animate .reveal.is-visible {
+  &.interest:hover, &.interest:focus-visible { transform: translateY(-4px); }
+  &.affil:hover { transform: translateY(-4px); }
+}
+.home--animate .interest.reveal {
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+}
