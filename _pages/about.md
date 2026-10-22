@@ -9,13 +9,18 @@ redirect_from:
 
 Namaste! I am **Vipul**, an AI researcher working on trustworthiness and scalability challenges in **Graph Machine Learning**, with a particular focus on fairness and robustness. I am currently a fifth-year PhD candidate in the Department of Electrical Engineering at the [Indian Institute of Technology Delhi](https://home.iitd.ac.in). My work spans graph deep learning, graph coarsening, medical image analytics, financial time-series, and knowledge distillation. Recently, I've been exploring the trustworthiness of LLMs and graph-language models. My research is advised by [Prof. Sandeep Kumar](https://sites.google.com/view/sandeepkr/home) and [Prof. Jayadeva](https://web.iitd.ac.in/~jayadeva/) at the [Machine Intelligence Signals and Networks (MISN) Lab](https://misn.iitd.ac.in). I am incredibly grateful and excited to mention that I have received the prestigious [Prime Minister’s Research Fellowship (PMRF)](https://www.pmrf.in) as part of my PhD journey.
 
-I have joined [Fujitsu Research](https://global.fujitsu/en-apac) as an intern in the AI lab, where I will be exploring the area of multi-agent systems, knowledge graphs, and dynamic graphs.
-
-I was a Visiting Junior Fellow in the lab of [Prof. Tsuyoshi Murata](https://www.net.c.titech.ac.jp/murata.html) at the [Institute of Science Tokyo](https://www.isct.ac.jp/en) from April to August 2026.
-
-Before starting my PhD, I completed my **M.Tech.** in the Department of Electrical Engineering at the [Indian Institute of Technology Patna](https://www.iitp.ac.in), where I worked on biomedical signal and image processing under the supervision of [Prof. Maheshkumar H. Kolekar](https://www.iitp.ac.in/~mahesh/). I earned my **B.Tech.** in Electronics and Communication Engineering from the [Dr. A.P.J. Abdul Kalam Technical University (AKTU)](https://aktu.ac.in).
-
 <div class="affiliations">
+  <a class="affil" href="https://global.fujitsu/en-apac" target="_blank" rel="noopener">
+    <span class="affil__logo affil__logo--mark">
+      <img src="/images/logos/fujitsu.png" alt="Fujitsu logo" loading="lazy"
+           onerror="this.parentNode.classList.add('is-missing')">
+      <span class="affil__fallback">FUJITSU</span>
+    </span>
+    <span class="affil__name">Fujitsu Research</span>
+    <span class="affil__role">Research Intern</span>
+    <span class="affil__years">2026 – Present</span>
+  </a>
+
   <a class="affil" href="https://home.iitd.ac.in" target="_blank" rel="noopener">
     <span class="affil__logo affil__logo--crest">
       <img src="/images/logos/iit-delhi.png" alt="IIT Delhi logo" loading="lazy"
@@ -25,17 +30,6 @@ Before starting my PhD, I completed my **M.Tech.** in the Department of Electric
     <span class="affil__name">IIT Delhi</span>
     <span class="affil__role">Ph.D. · PMRF Fellow</span>
     <span class="affil__years">2021 – Present</span>
-  </a>
-
-  <a class="affil" href="https://www.iitp.ac.in" target="_blank" rel="noopener">
-    <span class="affil__logo affil__logo--crest">
-      <img src="/images/logos/iit-patna.png" alt="IIT Patna logo" loading="lazy"
-           onerror="this.parentNode.classList.add('is-missing')">
-      <span class="affil__fallback">IIT Patna</span>
-    </span>
-    <span class="affil__name">IIT Patna</span>
-    <span class="affil__role">M.Tech.</span>
-    <span class="affil__years">2019 – 2021</span>
   </a>
 
   <a class="affil" href="https://www.isct.ac.jp/en" target="_blank" rel="noopener">
@@ -49,17 +43,23 @@ Before starting my PhD, I completed my **M.Tech.** in the Department of Electric
     <span class="affil__years">2026</span>
   </a>
 
-  <a class="affil" href="https://global.fujitsu/en-apac" target="_blank" rel="noopener">
-    <span class="affil__logo affil__logo--mark">
-      <img src="/images/logos/fujitsu.png" alt="Fujitsu logo" loading="lazy"
+  <a class="affil" href="https://www.iitp.ac.in" target="_blank" rel="noopener">
+    <span class="affil__logo affil__logo--crest">
+      <img src="/images/logos/iit-patna.png" alt="IIT Patna logo" loading="lazy"
            onerror="this.parentNode.classList.add('is-missing')">
-      <span class="affil__fallback">FUJITSU</span>
+      <span class="affil__fallback">IIT Patna</span>
     </span>
-    <span class="affil__name">Fujitsu Research</span>
-    <span class="affil__role">Research Intern</span>
-    <span class="affil__years">2026 – Present</span>
+    <span class="affil__name">IIT Patna</span>
+    <span class="affil__role">M.Tech.</span>
+    <span class="affil__years">2019 – 2021</span>
   </a>
 </div>
+
+I have joined [Fujitsu Research](https://global.fujitsu/en-apac) as an intern in the AI lab, where I will be exploring the area of multi-agent systems, knowledge graphs, and dynamic graphs.
+
+I was a Visiting Junior Fellow in the lab of [Prof. Tsuyoshi Murata](https://www.net.c.titech.ac.jp/murata.html) at the [Institute of Science Tokyo](https://www.isct.ac.jp/en) from April to August 2026.
+
+Before starting my PhD, I completed my **M.Tech.** in the Department of Electrical Engineering at the [Indian Institute of Technology Patna](https://www.iitp.ac.in), where I worked on biomedical signal and image processing under the supervision of [Prof. Maheshkumar H. Kolekar](https://www.iitp.ac.in/~mahesh/). I earned my **B.Tech.** in Electronics and Communication Engineering from the [Dr. A.P.J. Abdul Kalam Technical University (AKTU)](https://aktu.ac.in).
 
 <div style="display:flex; justify-content:center; gap:28px; flex-wrap:wrap;">
 
