@@ -97,7 +97,7 @@ I was a Visiting Junior Fellow in the lab of [Prof. Tsuyoshi Murata](https://www
 
 
 ## 📰 Updates
-- **[Sep 2026]** 🏆🎓 Joined [Fujitsu Research](https://global.fujitsu/en-apac) as Intern.
+- **[Oct 2026]** 🏆🎓 Joined [Fujitsu Research](https://global.fujitsu/en-apac) as Intern.
 - **[Sep 2026]** 🏆📄 Paper accepted at [Transactions on machine Learning Research](https://jmlr.org/tmlr/)
 - **[Aug 2026]** 🎓 Pre-PhD Synopsis Presentation completed!FINAL phase of PhD research.
 - **[Jun 2026]** 🏆📄 Paper accepted at [MICCAI 2026](https://conferences.miccai.org/2026/en/default.asp)
