@@ -11,7 +11,7 @@ Namaste! I am **Vipul**, an AI researcher building **trustworthy and scalable ma
 
 My Ph.D. research makes graph learning fair, robust and efficient, through certifiably robust and fair GNNs, fairness-aware knowledge distillation, graph coarsening, and graph–language models for neuroimaging. This work has been published at AAAI, MICCAI, TMLR and IEEE TSP. At Fujitsu, I am taking these ideas to systems that evolve over time: self-evolving AI agents, knowledge graphs, and anomaly detection in dynamic graphs.
 
-Earlier, I was a Visiting Junior Fellow with [Prof. Tsuyoshi Murata](https://www.net.c.titech.ac.jp/murata.html) at the [Institute of Science Tokyo](https://www.isct.ac.jp/en) (2026). I hold an **M.Tech.** from the [Indian Institute of Technology Patna](https://www.iitp.ac.in), where I worked on biomedical signal and image processing with [Prof. Maheshkumar H. Kolekar](https://www.iitp.ac.in/~mahesh/), and a **B.Tech.** in Electronics and Communication Engineering from [Dr. A.P.J. Abdul Kalam Technical University (AKTU)](https://aktu.ac.in).
+Earlier, I was a Visiting Junior Fellow with [Prof. Tsuyoshi Murata](https://www.net.c.titech.ac.jp/murata.html) at the [Institute of Science Tokyo](https://www.isct.ac.jp/en) (2026). I hold an **M.Tech.** from the [Indian Institute of Technology Patna](https://www.iitp.ac.in), where I worked on biomedical signal and image processing with [Prof. Maheshkumar H. Kolekar](https://www.iitp.ac.in/~mahesh/), and a **B.Tech.** in Electronics and Communication Engineering from [Dr. A.P.J. Abdul Kalam Technical University](https://aktu.ac.in).
 
 <div class="affiliations">
   <a class="affil" href="https://global.fujitsu/en-apac" target="_blank" rel="noopener">
