@@ -1,0 +1,59 @@
+/* ==========================================================================
+   Phones and tablets: show the profile links as visible buttons instead of
+   hiding them behind the "Follow" dropdown
+   ========================================================================== */
+
+@media (max-width: 924px) {
+  .author__urls-wrapper {
+    display: block;
+    width: 100%;
+    margin-top: 0.8em;
+
+    button { display: none !important; }   /* the old "Follow" toggle */
+  }
+
+  .author__urls {
+    display: flex !important;              /* always visible on small screens */
+    flex-wrap: wrap;
+    gap: 0.45em;
+    position: static;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    z-index: auto;
+
+    &:before, &:after { display: none !important; }   /* dropdown arrow */
+
+    li {
+      margin: 0;
+      white-space: nowrap;
+
+      &.author__desktop { display: none; }   /* location / employer */
+    }
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35em;
+      margin: 0 !important;
+      padding: 0.4em 0.8em;
+      border: 1px solid var(--global-border-color);
+      border-radius: 999px;
+      font-size: 0.78rem;
+      line-height: 1.2;
+      color: var(--global-text-color) !important;
+      text-decoration: none !important;
+      transition: border-color 0.2s ease, background-color 0.2s ease;
+
+      &:hover,
+      &:active {
+        border-color: #2f7f93;
+        background: rgba(47, 127, 147, 0.08);
+      }
+
+      i { margin: 0; padding: 0; color: #2f7f93; }
+    }
+  }
+}
