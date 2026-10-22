@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Research"
+title: "Publications"
 permalink: /publications/
 author_profile: true
 ---
@@ -12,79 +12,6 @@ author_profile: true
 {% assign workshops = pubs | where: "type", "workshop" %}
 
 <div class="research">
-
-<p class="research__lead">
-My research asks how machine learning systems can remain <strong>trustworthy</strong>, meaning fair, robust,
-privacy-aware, well-calibrated, and efficient, when they learn from complex, structured data and are deployed
-in the real world.
-</p>
-
-<p>
-In my Ph.D. at IIT Delhi, I have pursued this through theoretical and optimization-driven methods for
-graph-structured and biomedical data: certifiably robust and fair graph neural networks, fairness-aware
-GNN-to-MLP distillation, graph coarsening, and graph–language alignment for neuroimaging.
-As a Research Intern at <strong>Fujitsu Research</strong>, I am carrying these questions into systems that
-<em>change over time</em>. I am developing flow-matching models that detect anomalies in dynamic graphs,
-and self-evolving AI agents that must keep improving without losing reliability.
-</p>
-
-<ul class="research__stats">
-  <li><span class="research__stat-num">{{ pubs.size }}</span> publications</li>
-  <li><span class="research__stat-num">{{ conferences.size }}</span> conference papers</li>
-  <li><span class="research__stat-num">{{ journals.size }}</span> journal articles</li>
-  <li><span class="research__stat-num">{{ workshops.size }}</span> workshop papers</li>
-</ul>
-
-<p class="research__venues">
-  Published at <strong>AAAI</strong> · <strong>TMLR</strong> · <strong>MICCAI</strong> · <strong>IEEE TSP</strong> ·
-  <strong>IEEE TAI</strong> · <strong>ML4H</strong> · <strong>IEEE DSAA</strong> · <strong>MTAP</strong> · ICLR &amp; AAAI workshops
-</p>
-
-<h2 id="areas">Research Areas</h2>
-
-<div class="research__areas">
-  <div class="research__area research__area--current">
-    <h3>Self-Evolving AI Agents &amp; Dynamic Graph Anomaly Detection</h3>
-    <p>At Fujitsu Research, I work on self-evolving AI agents that improve their own behaviour over
-    time, and on flow-matching generative models for detecting anomalies in dynamic, time-evolving graphs.</p>
-    <p class="research__area-venues"><span>Fujitsu Research · 2026–Present</span></p>
-  </div>
-  <div class="research__area">
-    <h3>Trustworthy &amp; Efficient Graph Learning</h3>
-    <p>Certifiably robust and fair GNN training under structural and feature perturbations, and
-    fairness-aware GNN-to-MLP distillation for fast, graph-free inference. Current work examines
-    class-conditional transfer disparities and connectivity leakage in graph-free inference.</p>
-    <p class="research__area-venues"><span>IEEE TSP</span><span>AAAI</span><span>TMLR</span><span>DSAA</span></p>
-  </div>
-  <div class="research__area">
-    <h3>Graph Coarsening &amp; Scalable Graph Learning</h3>
-    <p>Optimization-based graph coarsening that shrinks large graphs while retaining the structural
-    and feature information needed for downstream tasks.</p>
-    <p class="research__area-venues"><span>Under review</span></p>
-  </div>
-  <div class="research__area">
-    <h3>Trustworthy Biomedical Representation Learning</h3>
-    <p>Self-supervised and equity-aware methods for heterogeneous neuroimaging data, including
-    multi-domain fMRI connectivity modelling for major depressive disorder and robust, fair
-    BOLD-signal analysis under distribution shift.</p>
-    <p class="research__area-venues"><span>MICCAI</span><span>ML4H</span></p>
-  </div>
-  <div class="research__area">
-    <h3>Graph–Language &amp; Tabular LLMs</h3>
-    <p>Aligning self-supervised fMRI graph representations with frozen language models for few-shot
-    diagnosis, and evaluating tabular LLMs on healthcare and EHR data for robustness, fairness,
-    privacy, uncertainty, and calibration.</p>
-    <p class="research__area-venues"><span>AAAI Workshop</span></p>
-  </div>
-  <div class="research__area">
-    <h3>Deployable Healthcare AI</h3>
-    <p>Deep learning for CT-based COVID-19 diagnosis in collaborative edge–cloud settings, built for
-    efficient inference on resource-constrained hardware.</p>
-    <p class="research__area-venues"><span>MTAP</span></p>
-  </div>
-</div>
-
-<h2 id="publications">Publications</h2>
 
 <div class="research__filters" role="group" aria-label="Filter publications">
   <button type="button" class="is-active" data-filter="all">All ({{ pubs.size }})</button>

@@ -24,32 +24,32 @@ tiles:
     venues: Fujitsu Research
     color: violet
     current: true
-    link: /publications/#areas
+    link: /publications/
 
   - icon: "🛡️"
     title: Trustworthy Graph Learning
     keywords: [Certified robustness, Fairness in GNNs, Privacy leakage]
     venues: IEEE TSP · AAAI
     color: teal
-    link: /publications/#areas
+    link: /publications/
 
   - icon: "⚡"
     title: Efficient & Scalable GraphML
     keywords: [GNN-to-MLP distillation, Graph coarsening, Graph-free inference]
     venues: AAAI · TMLR · DSAA
     color: amber
-    link: /publications/#areas
+    link: /publications/
 
   - icon: "🧠"
     title: Biomedical & Neuro AI
     keywords: [fMRI connectomes, Equity-aware self-supervision, Robust BOLD analysis]
     venues: MICCAI · ML4H
     color: rose
-    link: /publications/#areas
+    link: /publications/
 
   - icon: "💬"
     title: Graph–Language Models
     keywords: [Graph–LLM alignment, Tabular LLMs for EHR, Calibration & uncertainty]
     venues: AAAI Workshop
     color: indigo
-    link: /publications/#areas
+    link: /publications/
