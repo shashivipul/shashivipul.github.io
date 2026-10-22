@@ -60,42 +60,6 @@ Earlier, I was a Visiting Junior Fellow with [Prof. Tsuyoshi Murata](https://www
 </div>
 
 
-
-<div style="display:flex; justify-content:center; gap:28px; flex-wrap:wrap;">
-
-  <a href="https://www.linkedin.com/in/vipulsingh25"
-     target="_blank"
-     style="text-align:center; text-decoration:none;">
-    <i class="fab fa-linkedin" style="font-size:30px;"></i><br>
-    <span>LinkedIn</span>
-  </a>
-
-  <a href="https://scholar.google.com/citations?user=MRJqKywAAAAJ&hl=en"
-     target="_blank"
-     style="text-align:center; text-decoration:none;">
-    <i class="fas fa-graduation-cap" style="font-size:30px;"></i><br>
-    <span>Scholar</span>
-  </a>
-
-  <a href="https://github.com/shashivipul"
-     target="_blank"
-     style="text-align:center; text-decoration:none;">
-    <i class="fab fa-github" style="font-size:30px;"></i><br>
-    <span>GitHub</span>
-  </a>
-
-  <a href="https://drive.google.com/file/d/1WpLTwmIluLPxa7caAgfWQmlg-7Llh8zU/view?usp=share_link"
-     target="_blank"
-     style="text-align:center; text-decoration:none;">
-    <i class="fas fa-file-alt" style="font-size:30px;"></i><br>
-    <span>CV</span>
-  </a>
-
-</div>
-
-
-
-
 ## 📢 Recent News
 
 <div class="news-box" tabindex="0" aria-label="Recent news (scrollable)">
