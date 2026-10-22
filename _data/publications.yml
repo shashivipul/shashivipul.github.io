@@ -1,0 +1,100 @@
+# Publications shown on the Research page (/publications/).
+# To add a paper, copy an entry and edit it. Entries appear in the order listed
+# within each type. "type" must be one of: journal, conference, workshop.
+# Wrap your own name in <b>...</b> to highlight it.
+
+- type: conference
+  tag: AAAI
+  year: 2026
+  title: "Leap of FAITH from GNN-to-MLP: Fairness Aware Inference via Distillation of Graph Knowledge"
+  authors: "<b>Singh, V.K.</b>, Barman, J., Kumar, S., Gandhi, T.K., and Jayadeva"
+  venue: "Proceedings of the AAAI Conference on Artificial Intelligence"
+  url: "https://doi.org/10.1609/aaai.v40i30.39744"
+  label: DOI
+
+- type: conference
+  tag: MICCAI
+  year: 2026
+  title: "Equity-Aware Self-Supervised Multi-Domain Connectome Representation Learning for Major Depressive Disorder Diagnosis"
+  authors: "<b>Singh, V.K.</b>, Barman, J., Kumar, S., Gandhi, T.K., and Jayadeva"
+  venue: "International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI)"
+  url: "https://doi.org/10.1007/978-3-032-38069-2_16"
+  label: DOI
+
+- type: conference
+  tag: ML4H
+  year: 2025
+  title: "CoRE-BOLD: Cross-Domain Robust and Equitable Ensemble for BOLD Signal Analysis"
+  authors: "<b>Singh, V.K.</b>, Barman, J., Kumar, S., and Jayadeva"
+  venue: "Proceedings of the Machine Learning for Health (ML4H), PMLR 259:961–975"
+  url: "https://proceedings.mlr.press/v259/singh25a.html"
+  label: PMLR
+
+- type: conference
+  tag: DSAA
+  year: 2025
+  title: "REFINE: Enabling Efficient and Trustworthy Modeling of Financial Networks via GNN-to-MLP Knowledge Distillation"
+  authors: "<b>Singh, V.K.</b>, Barman, J., Kumar, S., and Jayadeva"
+  venue: "IEEE International Conference on Data Science and Advanced Analytics (DSAA), pp. 1–5"
+  url: "https://doi.org/10.1109/DSAA65442.2025.11247963"
+  label: DOI
+
+- type: journal
+  tag: TMLR
+  year: 2026
+  title: "Do MLPs Inherit GNN Knowledge Uniformly? Class-Conditional Transfer Equity in Graph-Free Distillation"
+  authors: "<b>Singh, V.K.</b>, Barman, J., Jayadeva, and Kumar, S."
+  venue: "Transactions on Machine Learning Research"
+  url: "https://openreview.net/forum?id=GDOC2rR4wv"
+  label: OpenReview
+
+- type: journal
+  tag: IEEE TSP
+  year: 2025
+  title: "A Unified Optimization-Based Framework for Certifiably Robust and Fair Graph Neural Networks"
+  authors: "<b>Singh, V.K.</b>, Kumar, S., Prasad, A., and Jayadeva"
+  venue: "IEEE Transactions on Signal Processing, 73:83–98"
+  url: "https://doi.org/10.1109/TSP.2024.3514091"
+  label: DOI
+
+- type: journal
+  tag: IEEE TAI
+  year: 2025
+  title: "Graph Machine Learning Framework for Gravimetry Data Analysis and Cavity Detection"
+  authors: "Panda, G., <b>Singh, V.K.</b>, Kumar, A., Saharia, M., and Kumar, S."
+  venue: "IEEE Transactions on Artificial Intelligence, pp. 1–16"
+  url: "https://doi.org/10.1109/TAI.2025.3648693"
+  label: DOI
+
+- type: journal
+  tag: MTAP
+  year: 2022
+  title: "Deep Learning Empowered COVID-19 Diagnosis Using Chest CT Scan Images for Collaborative Edge-Cloud Computing Platform"
+  authors: "<b>Singh, V.K.</b> and Kolekar, M.H."
+  venue: "Multimedia Tools and Applications, 81(1):3–30"
+  url: "https://doi.org/10.1007/s11042-021-11158-7"
+  label: DOI
+
+- type: workshop
+  tag: AAAI-W
+  year: 2026
+  title: "G-LaD: Graph-Language Alignment for Few-Shot Diagnosis from fMRI"
+  authors: "Gupta, A., <b>Singh, V.K.</b>, Barman, J., Kumar, S., and Arora, A."
+  venue: "AAAI Workshop on Neuro for AI and AI for Neuro, PMLR"
+  url: "https://proceedings.mlr.press/v308/gupta26a"
+  label: PMLR
+
+- type: workshop
+  tag: ICLR-W
+  year: 2025
+  title: "Bridging Efficiency, Stability, and Fairness: Self-Supervised GNN-to-MLP Knowledge Distillation for Financial Networks"
+  authors: "<b>Singh, V.K.</b>, Barman, J., Kumar, S., and Jayadeva"
+  venue: "ICLR Workshop on Advances in Financial AI: Opportunities, Innovations, and Responsible AI (poster)"
+  url: "https://iclr.cc/virtual/2025/33858"
+  label: ICLR
+
+- type: workshop
+  tag: Nature Conf.
+  title: "Equity-Aware Self-Supervised Multi-Domain Connectome Representation Learning for Major Depressive Disorder Diagnosis"
+  authors: "<b>Singh, V.K.</b>, Barman, J., Kumar, S., Gandhi, T.K., and Jayadeva"
+  venue: "Nature Conference on Redefining Healthcare in the Age of AI, France"

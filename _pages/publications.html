@@ -6,68 +6,134 @@ author_profile: true
 ---
 
 {% include base_path %}
+{% assign pubs = site.data.publications %}
+{% assign journals = pubs | where: "type", "journal" %}
+{% assign conferences = pubs | where: "type", "conference" %}
+{% assign workshops = pubs | where: "type", "workshop" %}
 
-<p>
-My research develops theoretical and optimization-driven methods for trustworthy machine learning,
+<div class="research">
+
+<p class="research__lead">
+My research develops theoretical and optimization-driven methods for <strong>trustworthy machine learning</strong>,
 with a focus on graph-structured and biomedical data. I study how learning systems can remain fair,
-robust, privacy-aware, uncertainty-aware, and scalable under real-world deployment constraints.
-My work spans certifiably robust and fair graph neural networks, fairness-aware knowledge distillation,
-graph coarsening, graph-language alignment, and trustworthy biomedical representation learning.
+robust, privacy-aware, uncertainty-calibrated, and scalable under real-world deployment constraints.
 </p>
 
-<h2>Research Areas</h2>
+<ul class="research__stats">
+  <li><span class="research__stat-num">{{ pubs.size }}</span> publications</li>
+  <li><span class="research__stat-num">{{ journals.size }}</span> journal articles</li>
+  <li><span class="research__stat-num">{{ conferences.size }}</span> conference papers</li>
+  <li><span class="research__stat-num">{{ workshops.size }}</span> workshop papers</li>
+</ul>
 
-<h3>Trustworthy and Efficient Graph Representation Learning</h3>
-<p>
-I study robustness, fairness, efficiency, and privacy in graph learning. My work includes certifiably
-robust and fair GNN training under structural and feature perturbations, and GNN-to-MLP knowledge
-distillation that enables efficient graph-free inference while preserving structural information and
-fairness. Current work also examines class-conditional transfer disparities and connectivity leakage in
-graph-free inference.
+<p class="research__venues">
+  Published at <strong>AAAI</strong> · <strong>TMLR</strong> · <strong>MICCAI</strong> · <strong>IEEE TSP</strong> ·
+  <strong>IEEE TAI</strong> · <strong>ML4H</strong> · <strong>IEEE DSAA</strong> · ICLR &amp; AAAI workshops
 </p>
 
-<h3>Graph Coarsening and Scalable Graph Learning</h3>
-<p>
-I develop optimization-based approaches for reducing graph size while preserving task-relevant
-structural and feature information. The goal is to make learning on large graph-structured datasets
-more computationally efficient without discarding the information needed downstream.
-</p>
+<h2 id="areas">Research Areas</h2>
 
-<h3>Trustworthy Biomedical Representation Learning</h3>
-<p>
-I design self-supervised, robust, and equity-aware learning methods for heterogeneous neuroimaging
-data. This includes multi-domain fMRI functional-connectivity modeling for major depressive disorder
-and robust/fair BOLD-signal analysis across population groups and distribution shifts.
-</p>
+<div class="research__areas">
+  <div class="research__area">
+    <h3>Trustworthy &amp; Efficient Graph Learning</h3>
+    <p>Certifiably robust and fair GNN training under structural and feature perturbations, and
+    fairness-aware GNN-to-MLP distillation for fast, graph-free inference. Current work examines
+    class-conditional transfer disparities and connectivity leakage in graph-free inference.</p>
+    <p class="research__area-venues"><span>IEEE TSP</span><span>AAAI</span><span>TMLR</span><span>DSAA</span></p>
+  </div>
+  <div class="research__area">
+    <h3>Graph Coarsening &amp; Scalable Graph Learning</h3>
+    <p>Optimization-based graph coarsening that shrinks large graphs while retaining the structural
+    and feature information needed for downstream tasks.</p>
+    <p class="research__area-venues"><span>Under review</span></p>
+  </div>
+  <div class="research__area">
+    <h3>Trustworthy Biomedical Representation Learning</h3>
+    <p>Self-supervised and equity-aware methods for heterogeneous neuroimaging data, including
+    multi-domain fMRI connectivity modelling for major depressive disorder and robust, fair
+    BOLD-signal analysis under distribution shift.</p>
+    <p class="research__area-venues"><span>MICCAI</span><span>ML4H</span></p>
+  </div>
+  <div class="research__area">
+    <h3>Graph–Language &amp; Tabular LLMs</h3>
+    <p>Aligning self-supervised fMRI graph representations with frozen language models for few-shot
+    diagnosis, and evaluating tabular LLMs on healthcare and EHR data for robustness, fairness,
+    privacy, uncertainty, and calibration.</p>
+    <p class="research__area-venues"><span>AAAI Workshop</span></p>
+  </div>
+  <div class="research__area">
+    <h3>Deployable Healthcare AI</h3>
+    <p>Deep learning for CT-based COVID-19 diagnosis in collaborative edge–cloud settings, built for
+    efficient inference on resource-constrained hardware.</p>
+    <p class="research__area-venues"><span>MTAP</span></p>
+  </div>
+</div>
 
-<h3>Graph-Language and Tabular Large Language Models</h3>
-<p>
-I investigate graph-language alignment for neurological data, including mapping self-supervised fMRI
-graph representations into the embedding space of frozen language models for few-shot diagnosis.
-I am also studying tabular large language models for healthcare and EHR data across robustness,
-fairness, privacy, uncertainty, and calibration.
-</p>
+<h2 id="publications">Publications</h2>
 
-<h3>Medical Imaging and Deployable Healthcare AI</h3>
-<p>
-My earlier work developed deep-learning methods for CT-based COVID-19 diagnosis in collaborative
-edge-cloud settings, targeting accurate and computationally practical inference in resource-constrained
-healthcare environments.
-</p>
+<div class="research__filters" role="group" aria-label="Filter publications">
+  <button type="button" class="is-active" data-filter="all">All ({{ pubs.size }})</button>
+  <button type="button" data-filter="journal">Journals ({{ journals.size }})</button>
+  <button type="button" data-filter="conference">Conferences ({{ conferences.size }})</button>
+  <button type="button" data-filter="workshop">Workshops ({{ workshops.size }})</button>
+</div>
 
-<h2>Publications</h2>
-
-{% if site.author.googlescholar %}
-<p>For a complete citation list, see my <a href="{{ site.author.googlescholar }}">Google Scholar profile</a>.</p>
-{% endif %}
-
-{% for post in site.publications reversed %}
-  {% include archive-single.html %}
+{% assign groups = "journal|Journal Articles,conference|Conference Papers,workshop|Workshop Papers &amp; Abstracts" | split: "," %}
+{% for g in groups %}
+  {% assign parts = g | split: "|" %}
+  {% assign items = pubs | where: "type", parts[0] %}
+  <section class="research__group" data-type="{{ parts[0] }}">
+    <h3>{{ parts[1] }}</h3>
+    <ol class="pub-list">
+    {% for p in items %}
+      <li class="pub">
+        <span class="pub__tag pub__tag--{{ p.type }}">{{ p.tag }}{% if p.year %} {{ p.year }}{% endif %}</span>
+        <div class="pub__body">
+          <div class="pub__title">
+            {% if p.url %}<a href="{{ p.url }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}
+          </div>
+          <div class="pub__authors">{{ p.authors }}</div>
+          <div class="pub__venue">{{ p.venue }}{% if p.year %}, {{ p.year }}{% endif %}</div>
+          {% if p.url %}<a class="pub__link" href="{{ p.url }}">{{ p.label | default: "Link" }} →</a>{% endif %}
+        </div>
+      </li>
+    {% endfor %}
+    </ol>
+  </section>
 {% endfor %}
 
-<h2>Ongoing Research</h2>
-<ul>
-  <li><strong>Do MLPs Inherit GNN Knowledge Uniformly? Class-Conditional Transfer Equity in Graph-Free Distillation.</strong> Revision submitted to Transactions on Machine Learning Research.</li>
-  <li><strong>Coarsened Graph Learning.</strong> Under review at Transactions on Machine Learning Research.</li>
-  <li><strong>The Hidden Privacy Cost of Graph-Free Inference: Connectivity Leakage in GNN-to-MLP Knowledge Distillation.</strong> Manuscript in preparation for ICLR 2027.</li>
+{% if site.author.googlescholar %}
+<p class="research__scholar">Full citation record on <a href="{{ site.author.googlescholar }}">Google Scholar</a>.</p>
+{% endif %}
+
+<h2 id="ongoing">Ongoing Work</h2>
+<ul class="research__ongoing">
+  <li><strong>Coarsened Graph Learning.</strong> Under review at <em>Transactions on Machine Learning Research</em>.</li>
+  <li><strong>The Hidden Privacy Cost of Graph-Free Inference: Connectivity Leakage in GNN-to-MLP Knowledge Distillation.</strong> In preparation.</li>
+  <li><strong>Tabular LLMs for healthcare.</strong> Evaluating robustness, fairness, privacy, uncertainty, and calibration on EHR data.</li>
 </ul>
+
+<h2 id="posters">Posters &amp; Presentations</h2>
+<ul class="research__ongoing">
+  <li><strong>Learning on Graphs (LoG), New Delhi, 2024</strong> — Best Poster Award</li>
+  <li><strong>ICLR 2025 Workshop on Advances in Financial AI</strong> — Poster presentation</li>
+  <li><strong>PMRF Symposium, IIT Indore, 2023</strong> — Poster presentation</li>
+</ul>
+
+</div>
+
+<script>
+(function () {
+  var buttons = document.querySelectorAll('.research__filters button');
+  var groups = document.querySelectorAll('.research__group');
+  buttons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var f = btn.getAttribute('data-filter');
+      buttons.forEach(function (b) { b.classList.toggle('is-active', b === btn); });
+      groups.forEach(function (g) {
+        g.style.display = (f === 'all' || g.getAttribute('data-type') === f) ? '' : 'none';
+      });
+    });
+  });
+})();
+</script>
