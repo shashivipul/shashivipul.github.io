@@ -141,6 +141,10 @@ and self-evolving AI agents that must keep improving without losing reliability.
 
 <script>
 (function () {
+  var root = document.querySelector('.research');
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* --- Filter buttons (with a fade between views) --- */
   var buttons = document.querySelectorAll('.research__filters button');
   var groups = document.querySelectorAll('.research__group');
   buttons.forEach(function (btn) {
@@ -148,9 +152,58 @@ and self-evolving AI agents that must keep improving without losing reliability.
       var f = btn.getAttribute('data-filter');
       buttons.forEach(function (b) { b.classList.toggle('is-active', b === btn); });
       groups.forEach(function (g) {
-        g.style.display = (f === 'all' || g.getAttribute('data-type') === f) ? '' : 'none';
+        var show = (f === 'all' || g.getAttribute('data-type') === f);
+        g.style.display = show ? '' : 'none';
+        if (show && !reduce) {
+          g.classList.remove('is-refresh');
+          void g.offsetWidth;            /* restart the animation */
+          g.classList.add('is-refresh');
+        }
       });
     });
   });
+
+  if (!root || reduce || !('IntersectionObserver' in window)) return;
+
+  /* --- Reveal elements as they scroll into view --- */
+  root.classList.add('research--animate');
+  var targets = root.querySelectorAll(
+    '.research__lead, .research__lead + p, .research__stats li, .research__venues, ' +
+    '.research h2, .research__area, .research__filters, .pub, .research__ongoing li'
+  );
+  targets.forEach(function (el) {
+    el.classList.add('reveal');
+    /* stagger siblings slightly */
+    var i = /^(H2|P)$/.test(el.tagName) ? 0 : Array.prototype.indexOf.call(el.parentNode.children, el);
+    el.style.transitionDelay = Math.min(i, 6) * 70 + 'ms';
+  });
+
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      var el = e.target;
+      el.classList.add('is-visible');
+      io.unobserve(el);
+      /* drop the stagger delay afterwards so hover effects respond instantly */
+      setTimeout(function () { el.style.transitionDelay = ''; }, 1100);
+      if (e.target.matches('.research__stats li')) countUp(e.target.querySelector('.research__stat-num'));
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  targets.forEach(function (el) { io.observe(el); });
+
+  /* --- Count the stats up from zero --- */
+  function countUp(el) {
+    if (!el) return;
+    var end = parseInt(el.textContent, 10), start = null, dur = 900;
+    if (!end) return;
+    function step(t) {
+      if (start === null) start = t;
+      var p = Math.min((t - start) / dur, 1);
+      el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3)));
+      if (p < 1) requestAnimationFrame(step);
+    }
+    el.textContent = '0';
+    requestAnimationFrame(step);
+  }
 })();
 </script>

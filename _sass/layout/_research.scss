@@ -200,3 +200,109 @@ $research-accent: #2f7f93;
     color: #c0392b;
   }
 }
+
+/* ==========================================================================
+   Research page animations
+   ========================================================================== */
+
+/* Scroll reveal (only applied when JS is on and reduced motion is off) */
+.research--animate .reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.research--animate .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Cards lift on hover */
+.research__area {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  }
+}
+
+/* "Live" pulse on the current Fujitsu card */
+.research__area--current .research__area-venues span::before {
+  content: "";
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  margin-right: 0.45em;
+  border-radius: 50%;
+  background: #c0392b;
+  vertical-align: 0.05em;
+  animation: research-pulse 1.8s ease-out infinite;
+}
+@keyframes research-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(192, 57, 43, 0.55); }
+  70%  { box-shadow: 0 0 0 7px rgba(192, 57, 43, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(192, 57, 43, 0); }
+}
+
+/* Publications: slide and highlight on hover */
+.pub {
+  position: relative;
+  transition: background-color 0.25s ease, padding-left 0.25s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #2f7f93;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    background: rgba(47, 127, 147, 0.04);
+    padding-left: 0.6em;
+
+    &::before { transform: scaleY(1); }
+    .pub__tag { transform: scale(1.06); }
+    .pub__link { transform: translateX(4px); }
+  }
+
+  &__tag,
+  &__link {
+    transition: transform 0.25s ease;
+  }
+}
+
+/* Filter buttons */
+.research__filters button {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+
+  &:active { transform: scale(0.95); }
+}
+
+/* Fade in a publication group after filtering */
+.research__group.is-refresh {
+  animation: research-fade 0.45s ease both;
+}
+@keyframes research-fade {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* Respect users who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  .research__area,
+  .pub,
+  .pub::before,
+  .pub__tag,
+  .pub__link,
+  .research__filters button {
+    transition: none !important;
+  }
+  .research__area:hover { transform: none; }
+  .research__area--current .research__area-venues span::before { animation: none; }
+}
