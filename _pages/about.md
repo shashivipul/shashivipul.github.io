@@ -15,6 +15,51 @@ I was a Visiting Junior Fellow in the lab of [Prof. Tsuyoshi Murata](https://www
 
 Before starting my PhD, I completed my **M.Tech.** in the Department of Electrical Engineering at the [Indian Institute of Technology Patna](https://www.iitp.ac.in), where I worked on biomedical signal and image processing under the supervision of [Prof. Maheshkumar H. Kolekar](https://www.iitp.ac.in/~mahesh/). I earned my **B.Tech.** in Electronics and Communication Engineering from the [Dr. A.P.J. Abdul Kalam Technical University (AKTU)](https://aktu.ac.in).
 
+<div class="affiliations">
+  <a class="affil" href="https://home.iitd.ac.in" target="_blank" rel="noopener">
+    <span class="affil__logo">
+      <img src="https://home.iitd.ac.in/images/logo-iit.png" alt="IIT Delhi logo" loading="lazy"
+           onerror="this.parentNode.classList.add('is-missing')">
+      <span class="affil__fallback">IIT Delhi</span>
+    </span>
+    <span class="affil__name">IIT Delhi</span>
+    <span class="affil__role">Ph.D. · PMRF Fellow</span>
+    <span class="affil__years">2021 – Present</span>
+  </a>
+
+  <a class="affil" href="https://www.iitp.ac.in" target="_blank" rel="noopener">
+    <span class="affil__logo">
+      <img src="/images/logos/iit-patna.png" alt="IIT Patna logo" loading="lazy"
+           onerror="this.parentNode.classList.add('is-missing')">
+      <span class="affil__fallback">IIT Patna</span>
+    </span>
+    <span class="affil__name">IIT Patna</span>
+    <span class="affil__role">M.Tech.</span>
+    <span class="affil__years">2019 – 2021</span>
+  </a>
+
+  <a class="affil" href="https://www.isct.ac.jp/en" target="_blank" rel="noopener">
+    <span class="affil__logo">
+      <img src="https://www.isct.ac.jp/cms/component/data/3204/683b2c70c009a7cf44b1024c265fe003.webp" alt="Institute of Science Tokyo logo" loading="lazy"
+           onerror="this.parentNode.classList.add('is-missing')">
+      <span class="affil__fallback">Science Tokyo</span>
+    </span>
+    <span class="affil__name">Institute of Science Tokyo</span>
+    <span class="affil__role">Visiting Researcher · LOTUS Fellow</span>
+    <span class="affil__years">2026</span>
+  </a>
+
+  <a class="affil" href="https://global.fujitsu/en-apac" target="_blank" rel="noopener">
+    <span class="affil__logo">
+      <img src="https://edge.sitecorecloud.io/fujitsulimi3ee2-nexusc5d4-nexusprod7316-5b84/media/Project/Fujitsu/Fujitsu-HQ/assets/img/logo-fujitsu.svg?iar=0" alt="Fujitsu logo" loading="lazy"
+           onerror="this.parentNode.classList.add('is-missing')">
+      <span class="affil__fallback">FUJITSU</span>
+    </span>
+    <span class="affil__name">Fujitsu Research</span>
+    <span class="affil__role">Research Intern · AI Lab</span>
+    <span class="affil__years">2026 – Present</span>
+  </a>
+</div>
 
 <div style="display:flex; justify-content:center; gap:28px; flex-wrap:wrap;">
 
