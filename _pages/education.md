@@ -75,7 +75,6 @@ layout: single
         </ul>
       </div>
       <a class="edu__logo" href="https://aktu.ac.in" target="_blank" rel="noopener">
-        <!-- Add images/logos/aktu.png to replace this monogram -->
         <img src="/images/logos/aktu.png" alt="AKTU logo" loading="lazy"
              onerror="this.parentNode.classList.add('is-missing')">
         <span class="edu__monogram">AKTU</span>
