@@ -56,6 +56,41 @@
     if (el) el.textContent = v;
   }
 
+  /* Stats count up each time they scroll into view (like the Research page) */
+  var statsBox = root.querySelector('.travel-stats');
+  if (statsBox && !reduce && 'IntersectionObserver' in window) {
+    statsBox.classList.add('is-animated');
+    var statEls = statsBox.querySelectorAll('li');
+    statEls.forEach(function (li, i) { li.style.transitionDelay = i * 80 + 'ms'; });
+    var countUp = function (el) {
+      if (!el.dataset.end) el.dataset.end = el.textContent;
+      var end = parseInt(el.dataset.end, 10);
+      if (isNaN(end)) return;
+      var from = end > 1000 ? end - 25 : 0;      /* years roll up instead of counting from 0 */
+      var t0 = null, dur = 1000;
+      cancelAnimationFrame(el._raf);
+      el.textContent = from;
+      (function stepFn(t) {
+        if (t0 === null) t0 = t;
+        var p = Math.min((t - t0) / dur, 1);
+        el.textContent = Math.round(from + (end - from) * (1 - Math.pow(1 - p, 3)));
+        if (p < 1) el._raf = requestAnimationFrame(stepFn);
+      })(performance.now());
+    };
+    var statIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        var li = e.target, num = li.querySelector('span');
+        if (e.isIntersecting) {
+          li.classList.add('is-visible');
+          if (num) countUp(num);
+        } else {
+          li.classList.remove('is-visible');   /* reset so it replays next time */
+        }
+      });
+    }, { threshold: 0.6 });
+    statEls.forEach(function (li) { statIO.observe(li); });
+  }
+
   /* ---------- SVG scaffold ---------- */
   var svg = d3.select(root.querySelector('.travel-map__svg'))
     .attr('viewBox', '0 0 ' + W + ' ' + H)
