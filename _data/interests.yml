@@ -41,9 +41,9 @@ tiles:
     link: /publications/
 
   - icon: "🧠"
-    title: Biomedical & Neuro AI
-    keywords: [fMRI connectomes, Equity-aware self-supervision, Robust BOLD analysis]
-    venues: MICCAI · ML4H
+    title: Healthcare Analytics & Network Neuroscience
+    keywords: [fMRI brain connectomes, Equity-aware self-supervision, Robust BOLD analysis, COVID-19 CT diagnosis]
+    venues: MICCAI · ML4H · MTAP
     color: rose
     link: /publications/
 
