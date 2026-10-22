@@ -72,3 +72,14 @@
 
   html[data-theme="dark"] .author__urls a i { color: #6cc7da !important; }
 }
+
+/* Phones/tablets: remove the empty space between the menu bar and the profile.
+   The theme pads the sidebar by the menu height (needed only for the fixed
+   desktop sidebar), which on small screens adds a large blank band. */
+@media (max-width: 1023px) {
+  #main { margin-top: 0.9em; }
+  .sidebar {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+}
