@@ -43,6 +43,7 @@
   authors: "<b>Singh, V.K.</b>, Barman, J., Kumar, S., and Jayadeva"
   venue: "IEEE International Conference on Data Science and Advanced Analytics (DSAA), pp. 1–5"
   url: "https://doi.org/10.1109/DSAA65442.2025.11247963"
+  image: ssgnn-mlp-iclrw25.jpg
   label: DOI
 
 - type: conference
