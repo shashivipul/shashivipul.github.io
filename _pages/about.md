@@ -116,3 +116,61 @@ I was a Visiting Junior Fellow in the lab of [Prof. Tsuyoshi Murata](https://www
 
 
 
+
+<script>
+(function () {
+  var aff = document.querySelector('.affiliations');
+  if (!aff) return;
+  var root = aff.parentNode;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Mark pieces of the page so the styles can target them */
+  root.classList.add('home');
+  var social = root.querySelector('.fa-linkedin');
+  social = social && social.closest('div');
+  if (social) social.classList.add('home-social');
+  aff.querySelectorAll('.affil').forEach(function (a) {
+    if (/present/i.test(a.querySelector('.affil__years').textContent)) a.classList.add('is-current');
+  });
+  var updates = Array.prototype.find.call(root.querySelectorAll('h2'), function (h) { return /updates/i.test(h.textContent); });
+  var updList = updates && updates.nextElementSibling;
+  if (updList && updList.tagName === 'UL' && updList.firstElementChild) {
+    var badge = document.createElement('span');
+    badge.className = 'home-new';
+    badge.textContent = 'NEW';
+    updList.firstElementChild.appendChild(badge);
+  }
+
+  if (reduce || !('IntersectionObserver' in window)) return;
+  root.classList.add('home--animate');
+
+  /* Stagger groups of siblings */
+  function stagger(list, step, base) {
+    Array.prototype.forEach.call(list, function (el, i) {
+      el.classList.add('reveal');
+      el.style.transitionDelay = (base || 0) + i * step + 'ms';
+    });
+  }
+  stagger(Array.prototype.filter.call(root.children, function (el) {
+    return el.tagName === 'P' && !el.closest('.affiliations');
+  }), 120);
+  stagger(aff.querySelectorAll('.affil'), 110, 250);
+  if (social) stagger(social.querySelectorAll('a'), 80, 150);
+  if (updates) stagger([updates], 0);
+  if (updList) stagger(updList.children, 60);
+
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      var el = e.target;
+      el.classList.add('is-visible');
+      io.unobserve(el);
+      setTimeout(function () { el.style.transitionDelay = ''; }, 1600);
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+  root.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+
+  /* Highlighter sweep on bold keywords once the intro is in view */
+  setTimeout(function () { root.classList.add('home--highlight'); }, 700);
+})();
+</script>
