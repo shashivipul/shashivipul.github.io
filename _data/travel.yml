@@ -1,0 +1,137 @@
+# =============================================================================
+#  Travel page data  (/travel/)
+# =============================================================================
+#
+#  HOW TO ADD A NEW TRIP
+#  1. If the country is new, add it under "countries" (copy any entry).
+#     - id: a short code you choose (ISO codes like FR, JP work well)
+#     - lat / lon: where the dot sits on the map (a city or the country centre)
+#     - map_id: the country's ISO 3166 numeric code, used to shade it on the
+#       map (look it up on Wikipedia, e.g. Japan = 392). Optional.
+#  2. Add the trip under "trips": the year and the route as a list of ids,
+#     in the order you travelled. Each consecutive pair becomes an arrow.
+#
+#  HOW TO ADD PHOTOS
+#  1. Put the image files in the folder  images/travel/
+#     (JPG or WebP, about 1600px on the long side keeps the page fast).
+#  2. List them under that country's "photos" with an optional caption:
+#       photos:
+#         - file: paris-eiffel.jpg
+#           caption: "Eiffel Tower at dusk"
+#
+# =============================================================================
+
+home: IN
+
+countries:
+  - id: IN
+    name: India
+    flag: "🇮🇳"
+    continent: Asia
+    lat: 28.61
+    lon: 77.21
+    map_id: 356
+    photos: []
+
+  - id: NP
+    name: Nepal
+    flag: "🇳🇵"
+    continent: Asia
+    lat: 27.72
+    lon: 85.32
+    map_id: 524
+    photos: []
+
+  - id: SG
+    name: Singapore
+    flag: "🇸🇬"
+    continent: Asia
+    lat: 1.35
+    lon: 103.82
+    map_id: 702
+    photos: []
+
+  - id: AE
+    name: Dubai, UAE
+    short: Dubai
+    flag: "🇦🇪"
+    continent: Asia
+    lat: 25.20
+    lon: 55.27
+    map_id: 784
+    photos: []
+
+  - id: GB
+    name: United Kingdom
+    short: UK            # optional shorter label for the map
+    flag: "🇬🇧"
+    continent: Europe
+    lat: 51.51
+    lon: -0.13
+    map_id: 826
+    photos: []
+
+  - id: JP
+    name: Japan
+    flag: "🇯🇵"
+    continent: Asia
+    lat: 35.68
+    lon: 139.69
+    map_id: 392
+    photos: []
+
+  - id: FR
+    name: France
+    flag: "🇫🇷"
+    continent: Europe
+    lat: 48.86
+    lon: 2.35
+    map_id: 250
+    photos: []
+
+  - id: LU
+    name: Luxembourg
+    flag: "🇱🇺"
+    continent: Europe
+    lat: 49.61
+    lon: 6.13
+    map_id: 442
+    photos: []
+
+  - id: CH
+    name: Switzerland
+    flag: "🇨🇭"
+    continent: Europe
+    lat: 46.95
+    lon: 7.45
+    map_id: 756
+    photos: []
+
+  - id: DE
+    name: Germany
+    flag: "🇩🇪"
+    continent: Europe
+    lat: 52.52
+    lon: 13.40
+    map_id: 276
+    photos: []
+
+# Trips in the order they happened. The animation plays them in this order.
+trips:
+  - year: 2019
+    route: [IN, NP]
+
+  - year: 2025
+    route: [IN, SG]
+
+  - year: 2025
+    route: [IN, AE, GB]
+
+  - year: 2026
+    route: [IN, SG]
+
+  - year: 2026
+    route: [IN, JP]
+
+  - year: 2026
+    route: [IN, FR, LU, FR, CH, FR, DE]
