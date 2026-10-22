@@ -408,7 +408,20 @@
   }
 
   var replayBtn = root.querySelector('.travel-replay');
-  if (replayBtn) replayBtn.addEventListener('click', play);
+  if (replayBtn) replayBtn.addEventListener('click', function () {
+    /* Replay shows the whole journey: clear any country spotlight or year
+       filter first, otherwise the routes would be drawn faded */
+    selected = null;
+    activeYear = 'all';
+    nodeSel.classed('is-selected', false);
+    highlightLand(null);
+    if (chipsBox) chipsBox.querySelectorAll('button').forEach(function (b) { b.classList.remove('is-active'); });
+    if (filters) filters.querySelectorAll('button').forEach(function (b) {
+      b.classList.toggle('is-active', b.getAttribute('data-year') === 'all');
+    });
+    applyFocus();
+    play();
+  });
 
   /* Start the journey the first time the map scrolls into view */
   resetState();
