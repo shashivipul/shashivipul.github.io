@@ -1,3 +1,25 @@
 <script type="module" src="{{ base_path }}/assets/js/main.min.js"></script>
 
 {% include analytics.html %}
+
+<script>
+  /* Open links to other websites in a new tab, so visitors don't leave this site.
+     Links within the site, email links and in-page anchors stay in the same tab. */
+  (function () {
+    function mark(root) {
+      (root || document).querySelectorAll('a[href]').forEach(function (a) {
+        var href = a.getAttribute('href');
+        if (!href || href.charAt(0) === '#' || /^(mailto|tel|javascript):/i.test(href)) return;
+        var url;
+        try { url = new URL(href, location.href); } catch (e) { return; }
+        if (!/^https?:$/.test(url.protocol) || url.host === location.host) return;
+        a.setAttribute('target', '_blank');
+        var rel = (a.getAttribute('rel') || '').split(/\s+/);
+        ['noopener', 'noreferrer'].forEach(function (r) { if (rel.indexOf(r) < 0) rel.push(r); });
+        a.setAttribute('rel', rel.join(' ').trim());
+      });
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function () { mark(); });
+    else mark();
+  })();
+</script>
