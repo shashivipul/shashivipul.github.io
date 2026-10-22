@@ -148,7 +148,7 @@ I was a Visiting Junior Fellow in the lab of [Prof. Tsuyoshi Murata](https://www
   function stagger(list, step, base) {
     Array.prototype.forEach.call(list, function (el, i) {
       el.classList.add('reveal');
-      el.style.transitionDelay = (base || 0) + i * step + 'ms';
+      el.dataset.delay = (base || 0) + i * step + 'ms';
     });
   }
   stagger(Array.prototype.filter.call(root.children, function (el) {
@@ -159,18 +159,36 @@ I was a Visiting Junior Fellow in the lab of [Prof. Tsuyoshi Murata](https://www
   if (updates) stagger([updates], 0);
   if (updList) stagger(updList.children, 60);
 
+  /* Play the reveal every time an element enters the screen, and reset it
+     when it leaves, so it animates again on scroll up or down */
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {
-      if (!e.isIntersecting) return;
       var el = e.target;
-      el.classList.add('is-visible');
-      io.unobserve(el);
-      setTimeout(function () { el.style.transitionDelay = ''; }, 1600);
+      clearTimeout(el._revealTimer);
+      if (e.isIntersecting) {
+        el.style.transitionDelay = el.dataset.delay || '0ms';
+        el.classList.add('is-visible');
+        /* drop the delay afterwards so hover effects respond instantly */
+        el._revealTimer = setTimeout(function () { el.style.transitionDelay = ''; }, 1600);
+      } else {
+        el.style.transitionDelay = '0ms';
+        el.classList.remove('is-visible');
+      }
     });
   }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
   root.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
 
-  /* Highlighter sweep on bold keywords once the intro is in view */
-  setTimeout(function () { root.classList.add('home--highlight'); }, 700);
+  /* Highlighter sweep on bold keywords, replayed whenever the intro comes back into view */
+  var hlTimer;
+  var hl = new IntersectionObserver(function (entries) {
+    clearTimeout(hlTimer);
+    if (entries[entries.length - 1].isIntersecting) {
+      hlTimer = setTimeout(function () { root.classList.add('home--highlight'); }, 500);
+    } else {
+      root.classList.remove('home--highlight');
+    }
+  }, { threshold: 0.2 });
+  var firstP = root.querySelector(':scope > p');
+  if (firstP) hl.observe(firstP);
 })();
 </script>

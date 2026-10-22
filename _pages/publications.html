@@ -175,18 +175,24 @@ and self-evolving AI agents that must keep improving without losing reliability.
     el.classList.add('reveal');
     /* stagger siblings slightly */
     var i = /^(H2|P)$/.test(el.tagName) ? 0 : Array.prototype.indexOf.call(el.parentNode.children, el);
-    el.style.transitionDelay = Math.min(i, 6) * 70 + 'ms';
+    el.dataset.delay = Math.min(i, 6) * 70 + 'ms';
   });
 
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {
-      if (!e.isIntersecting) return;
       var el = e.target;
-      el.classList.add('is-visible');
-      io.unobserve(el);
-      /* drop the stagger delay afterwards so hover effects respond instantly */
-      setTimeout(function () { el.style.transitionDelay = ''; }, 1100);
-      if (e.target.matches('.research__stats li')) countUp(e.target.querySelector('.research__stat-num'));
+      clearTimeout(el._revealTimer);
+      if (e.isIntersecting) {
+        el.style.transitionDelay = el.dataset.delay || '0ms';
+        el.classList.add('is-visible');
+        /* drop the stagger delay afterwards so hover effects respond instantly */
+        el._revealTimer = setTimeout(function () { el.style.transitionDelay = ''; }, 1100);
+        if (el.matches('.research__stats li')) countUp(el.querySelector('.research__stat-num'));
+      } else {
+        /* reset so it animates again next time it scrolls into view */
+        el.style.transitionDelay = '0ms';
+        el.classList.remove('is-visible');
+      }
     });
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
   targets.forEach(function (el) { io.observe(el); });
@@ -194,16 +200,18 @@ and self-evolving AI agents that must keep improving without losing reliability.
   /* --- Count the stats up from zero --- */
   function countUp(el) {
     if (!el) return;
-    var end = parseInt(el.textContent, 10), start = null, dur = 900;
+    if (!el.dataset.end) el.dataset.end = el.textContent;
+    var end = parseInt(el.dataset.end, 10), start = null, dur = 900;
+    cancelAnimationFrame(el._raf);
     if (!end) return;
     function step(t) {
       if (start === null) start = t;
       var p = Math.min((t - start) / dur, 1);
       el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3)));
-      if (p < 1) requestAnimationFrame(step);
+      if (p < 1) el._raf = requestAnimationFrame(step);
     }
     el.textContent = '0';
-    requestAnimationFrame(step);
+    el._raf = requestAnimationFrame(step);
   }
 })();
 </script>
