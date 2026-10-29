@@ -10,7 +10,7 @@ redirect_from:
 <div class="home-layout">
 <div class="home-main" markdown="1">
 
-Namaste! I am **Vipul**, a final-year Ph.D. candidate and [Prime Minister’s Research Fellow (PMRF)](https://www.pmrf.in) at the [Indian Institute of Technology Delhi](https://home.iitd.ac.in), and a Research Intern at **[Fujitsu Research](https://global.fujitsu/en-apac)**. My research focuses on **trustworthy graph machine learning**, AI agents, and healthcare analytics, building models that are fair, robust, and efficient in real-world deployment.
+Namaste! I am **Vipul**, a final-year Ph.D. candidate and [Prime Minister’s Research Fellow (PMRF)](https://www.pmrf.in) at the [Indian Institute of Technology Delhi](https://home.iitd.ac.in). I am currently a Research Intern at **[Fujitsu Research](https://global.fujitsu/en-apac)**. My research focuses on **trustworthy graph machine learning**, AI agents, and healthcare analytics, building models that are trustworthy and efficient in real-world deployment.
 
 I am advised by [Prof. Sandeep Kumar](https://sites.google.com/view/sandeepkr/home) and [Prof. Jayadeva](https://web.iitd.ac.in/~jayadeva/) at the [Machine Intelligence Signals and Networks (MISN) Lab](https://misn.iitd.ac.in), and have completed my Pre-Ph.D. Synopsis; I will be graduating soon.
 
