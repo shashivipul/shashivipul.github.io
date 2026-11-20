@@ -2,6 +2,7 @@
 # To add a paper, copy an entry and edit it. Entries appear in the order listed
 # within each type. "type" must be one of: journal, conference, workshop.
 # Wrap your own name in <b>...</b> to highlight it.
+# Optional "note": a small line under the authors, e.g. "* Equal contribution".
 # Optional "image": a framework figure or key result shown under the badge.
 #   Put the file in images/papers/ and write just the file name, e.g.
 #   image: faith-aaai26.png   (PNG/JPG, ~800px wide works well)
@@ -20,7 +21,8 @@
   tag: MICCAI
   year: 2026
   title: "Equity-Aware Self-Supervised Multi-Domain Connectome Representation Learning for Major Depressive Disorder Diagnosis"
-  authors: "<b>Singh, V.K.</b>, Barman, J., Kumar, S., Gandhi, T.K., and Jayadeva"
+  authors: "<b>Singh, V.K.*</b>, Barman, J.*, Kumar, S., Gandhi, T.K., and Jayadeva"
+  note: "* Equal contribution"
   venue: "International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI)"
   url: "https://doi.org/10.1007/978-3-032-38069-2_16"
   image: connectome-miccai26.jpg

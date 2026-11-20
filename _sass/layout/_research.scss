@@ -401,3 +401,10 @@ $research-accent: #2f7f93;
 }
 
 html[data-theme="dark"] .pub__thumb { filter: brightness(0.94); }
+
+.pub__note {
+  margin-top: 0.1em;
+  font-size: 0.72em;
+  font-style: italic;
+  color: var(--global-text-color-light);
+}

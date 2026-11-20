@@ -40,6 +40,7 @@ author_profile: true
             {% if p.url %}<a href="{{ p.url }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}
           </div>
           <div class="pub__authors">{{ p.authors }}</div>
+          {% if p.note %}<div class="pub__note">{{ p.note }}</div>{% endif %}
           <div class="pub__venue">{{ p.venue }}{% if p.year %}, {{ p.year }}{% endif %}</div>
           {% if p.url %}<a class="pub__link" href="{{ p.url }}">{{ p.label | default: "Link" }} →</a>{% endif %}
         </div>
