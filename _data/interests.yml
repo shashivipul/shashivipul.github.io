@@ -24,7 +24,7 @@ tiles:
   - icon: "🤖"
     title: Self-Evolving AI Agents
     focus: Learning uncertainty-aware, shareable procedural memory from graph-based action trajectories
-    keywords: [Procedural memory, Uncertainty awareness, Cross-agent skill sharing, Action-trajectory graphs]
+    keywords: [Procedural memory, Uncertainty awareness, Action-trajectory hierarchical graphs]
     venues: Fujitsu Research
     color: violet
     current: true
@@ -33,7 +33,7 @@ tiles:
   - icon: "🌊"
     title: Generative Modeling on Graphs
     focus: Recursive flow matching with piecewise energy on graphs
-    keywords: [Flow matching, Piecewise energy, Recursive refinement, Graph generation]
+    keywords: [Flow matching, Piecewise graph energy, Recursive refinement, Graph generation, Anamoly detection]
     venues: Fujitsu Research
     color: emerald
     current: true
