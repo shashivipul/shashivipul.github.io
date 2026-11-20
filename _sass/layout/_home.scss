@@ -264,7 +264,8 @@ $int-colors: (
   indigo: #4c5fd5,
   rose:   #d6456b,
   amber:  #c97f12,
-  violet: #7c4dcc
+  violet: #7c4dcc,
+  emerald: #17936a
 );
 
 .interests {
@@ -343,6 +344,14 @@ $int-colors: (
       vertical-align: 0.08em;
       animation: interest-blink 1.6s ease-in-out infinite;
     }
+  }
+
+  &__focus {
+    font-size: 0.8em;
+    font-style: italic;
+    line-height: 1.45;
+    color: var(--global-text-color);
+    opacity: 0.9;
   }
 
   &__keys {
@@ -560,6 +569,7 @@ html[data-theme="dark"] {
         &:not(:last-child)::after { content: " · "; opacity: 0.5; }
       }
     }
+    .interest__focus { font-size: 0.7em; }
     .interest__venues { font-size: 0.6em; }
     .interest__motif { width: 30px; height: 30px; top: 0.5em; right: 0.5em; }
 
